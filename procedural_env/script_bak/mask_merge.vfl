@@ -41,7 +41,10 @@ for(int i = 1; i < size + 1; i++)
 /////////////////////////////////////////////////////////////////
 // viability selection
 
-//closepoints
+
+int[] closepoints = nearpoints(0, pos, 10);
+//int nearest[] = nearpoints(0, "Cd.x<1.0", v@P, 1);
+//i@closepoints = len(nearest);
 //closept
 
 for(int i = 1; i < @closepoints; i++)
