@@ -21,6 +21,10 @@ bindings页签
 4.如果勾选optional，则可以通过#ifdef HAS_变量名  来检查某个变量是否有效。
 
 
+参考
+heightfield的大部分节点都是用opencl实现的，可以直接参考
+另外可以参考3rd/AmbientOcclusion，也有比较复杂的用法，包括如何获取特定点周围的数据
+
 */
 
 kernel void kernelName(
@@ -49,7 +53,7 @@ kernel void kernelName(
     float3 up = {0, 0, 1};
     //int idx = height_stride_stride_offset + height_stride_x * gidx + height_stride_y * gidy + height_stride_z * gidz;
     //由于地形的gidz总是0，所以可以忽略
-    //对地形来说mask
+    //对地形来说mask的大小和height一致，所以无需单独计算idx
     int idx = height_stride_stride_offset + height_stride_x * gidx + height_stride_y * gidy;
 
     float3 P = {gidx, gidy, height[idx]};
@@ -59,3 +63,4 @@ kernel void kernelName(
     
     mask[idx] = N.x;
 }
+
