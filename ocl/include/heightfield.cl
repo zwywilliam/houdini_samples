@@ -105,7 +105,7 @@ static float heightFieldFakeSDFWithMask(
     }
 
     // todo: avoid if/else
-    if(pivot_diff > 0)
+    if(pivot_diff < 0)
     {
         return ret_dist;
     }

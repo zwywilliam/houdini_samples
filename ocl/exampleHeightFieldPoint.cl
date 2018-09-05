@@ -10,7 +10,7 @@ kernel页签
 4.如果需要预定义宏，可以在kerneal options加上-D宏名字。
 
 options页签
-1.对地形处理一般要选择first writeable volume，然后kernel线程设置相关的信息会以这个volume的size为准
+1.对地形处理一般要选择first writeable volume
 
 bindings页签
 1.kernel的线程设置与first writeable volume的xyz维度一致
@@ -27,49 +27,47 @@ bindings页签
 3.如何同时处理heightfield和点集
    参考3rd/h16_5_ocl_examples/attribfromvolume.hip，大体方案就是首先需要将点集和地形merge，然后在opencl内读取点集的P，转换为地形的idx并获取相关值
    注意一次只能写入点集或者地形，无法两边同时写入
-   另外可以参考https://www.cnblogs.com/peng-vfx/p/8989290.html
 
 
 */
 
-kernel void kernelName(
-    int height_stride_x,
-    int height_stride_y,
-    int height_stride_z,
-    int height_stride_stride_offset,
-    float height_voxelsize_x,
-    float height_voxelsize_y,
-    float height_voxelsize_z,
-    global float * height,
-    int mask_stride_x,
-    int mask_stride_y,
-    int mask_stride_z,
-    int mask_stride_stride_offset,
-    global float * mask,
-    int param1
+
+
+
+kernel void exampleHeightFieldPoint( 
+                 int P_length, 
+                 global float * P ,
+                 int pscale_length, 
+                 global float * pscale ,
+                 int height_stride_x, 
+                 int height_stride_y, 
+                 int height_stride_z, 
+                 int height_stride_offset, 
+                 int height_res_x, 
+                 int height_res_y, 
+                 int height_res_z, 
+                 float16 height_xformtovoxel, 
+                 global float * height 
 )
 {
-    //获取线程id
-    int gidx = get_global_id(0);
-    int gidy = get_global_id(1);
-    int gidz = get_global_id(2);
-
-    //地形的up向量
-    float3 up = {0, 0, 1};
-    //int idx = height_stride_stride_offset + height_stride_x * gidx + height_stride_y * gidy + height_stride_z * gidz;
-    //由于地形的gidz总是0，所以可以忽略
-    //对地形来说mask的大小和height一致，所以无需单独计算idx
-    int idx = height_stride_stride_offset + height_stride_x * gidx + height_stride_y * gidy;
-
-    float3 P = {gidx, gidy, height[idx]};
-    // 随便调用一个函数，用height计算一些数据（比如算normal）
-    float3 N = buildVoxelNormal(
-        gidx, gidy, height, height_stride_x, height_stride_y,
-        height_stride_stride_offset, height_voxelsize_x);
+    int idx = get_global_id(0);
+    if (idx >= pscale_length)
+        return;
+        
+    float3 pos = vload3(idx, P);
+    float4 voxelpos = pos.x * height_xformtovoxel.lo.lo +
+                      pos.y * height_xformtovoxel.lo.hi +
+                      pos.z * height_xformtovoxel.hi.lo +
+                      height_xformtovoxel.hi.hi;
+    int3 voxelidx;
+    voxelidx.x = clamp((int)(floor(voxelpos.x)), 0, height_res_x-1);
+    voxelidx.y = clamp((int)(floor(voxelpos.y)), 0, height_res_y-1);
+    voxelidx.z = clamp((int)(floor(voxelpos.z)), 0, height_res_z-1);
     
-    // 回写到mask
-    mask[idx] = N.x;
+    float d = height[height_stride_offset +
+                      height_stride_x * voxelidx.x +
+                      height_stride_y * voxelidx.y +
+                      height_stride_z * voxelidx.z];
+    float3 val = (float3)(1.0f, d/10.0f, 1.0f);
+    vstore3(val, idx, pscale);
 }
-
-
-

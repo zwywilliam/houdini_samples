@@ -10,6 +10,20 @@
 
 #include "include/heightfield.cl"
 
+
+#include "interpolate.h" 
+float lerpConstant( constant float * in, int size, float pos);
+
+kernel void kernelName( 
+                 int _length, 
+                 global float *  
+)
+{
+    // No writeable attribute provided
+
+}
+
+
 /*
 heightFieldFakeSDFWithMask(
     int gidx,

@@ -48,24 +48,25 @@ kernel void kernelName(
         mask,
         stride_y,
         stride_offset,
-        voxelsize,
+        voxelsize_y,
         sample_step,
         sample_step_distance,
-        0.5f,// pivot
-        -sample_distance,// min
-        sample_distance,// max
+        0.5f// pivot
     );
 
-    float age_value = dist;
+    float age_value = clamp(dist, 0.0f, sample_distance);
+    age_value = age_value / sample_distance;
+
+
 
     int idx = heightFieldGid2Index(gidx, gidy, stride_y, stride_offset);
 
     vegetation_age[idx] = age_value;
     
-    // Post-processing
-    ao_value = pow(ao_value, power);
-    ao_value = clamp(ao_value, 0.0f, 1.0f);
-    ao_value = 1 - ao_value;
+    // // Post-processing
+    // ao_value = pow(ao_value, power);
+    // ao_value = clamp(ao_value, 0.0f, 1.0f);
+    // ao_value = 1 - ao_value;
     
-    ao[idx] = ao_value;
+    // ao[idx] = ao_value;
 }
