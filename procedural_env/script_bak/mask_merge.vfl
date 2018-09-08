@@ -1,4 +1,6 @@
-int size = 0;//???
+// mask merge
+
+int size = chi("../../Number_of_attributes");
 float newmask = 0;//???
 
 float heightmask = 1
@@ -10,7 +12,7 @@ for(int i = 1; i < size + 1; i++)
     float tempmask = volumesample(0, volume, temp);
     string ramp = "../../Attribute_Ramp__";
     ramp = ramp + itoa(i);
-    if(volume == "Altitude")
+    if(volume == "Altitude") // altitude layer merge logic
     {
         //volumesample(filename, volumename, pos)
         float tempheight = volumesample(0, 'height', temp);
@@ -26,7 +28,7 @@ for(int i = 1; i < size + 1; i++)
         //chramp(channel, ramppos, time)
         newmask *= chramp(ramp, heightmask);
     }
-    else
+    else // other layers
     {
         newmask *= chramp(ramp, tempmask);
     }
@@ -41,8 +43,8 @@ for(int i = 1; i < size + 1; i++)
 /////////////////////////////////////////////////////////////////
 // viability selection
 
-
-int[] closepoints = nearpoints(0, pos, 10);
+// radius
+int @closepoints[] = nearpoints(0, pos, 10);
 //int nearest[] = nearpoints(0, "Cd.x<1.0", v@P, 1);
 //i@closepoints = len(nearest);
 //closept
@@ -66,11 +68,12 @@ for(int i = 1; i < @closepoints; i++)
     float dis = distance2(P1, P2);
     if(dis < (vbRadius1 + vbRadius2))
     {
-        setpointattrib(0, 'removed', pt, 1);
+        setpointattrib(0, 'removed', pt, 1); // remove other point
     }
     else
     {
-        @removed = 1;
+        @removed = 1; // remove myself
         return;
     }
 }
+
