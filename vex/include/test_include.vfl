@@ -1,0 +1,6 @@
+//s@unreal_instance = "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea";
+
+string get_testname()
+{
+    return "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea";
+}
