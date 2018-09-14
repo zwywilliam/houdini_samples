@@ -1,0 +1,167 @@
+#include "gs_const_def.vfl"
+
+struct entity_size_variant
+{
+    string unreal_path = "";
+}
+
+struct vegetation_type_info
+{
+    float viability = 0.0f;
+    float viability_radius = 0.0f;
+    float priority = 0.0f;
+    float priority_radius = 0.0f;
+    int can_under_shade = 0;
+    float scale_min = 0.9f;
+    float scale_max = 1.1f;
+
+    
+
+    void init_viability()
+    {
+        viability = ch("../../viability");
+        viability_radius = ch("../../viability_radius");
+    }
+
+    void init_priority()
+    {
+        ;
+    }
+
+    void init_scale()
+    {
+        ;
+    }
+}
+
+struct vegetation_mask_info
+{
+    float layer_ao;
+    float layer_height;
+    float layer_flow;
+    float layer_move;
+}
+
+
+struct vegetation_point_info
+{
+    vegetation_type_info type_info;
+    float removed = 0.0f;
+}
+
+struct heightfield_info
+{
+    float min_height = 0.0f;
+    float max_height = 100.0f;
+
+    void init()
+    {
+        ;
+    }
+}
+
+
+
+// void gs_vegetation_mask_init(int ptnum, int type_idx)
+// {
+
+// }
+
+
+
+
+// void gs_vegetation_point_init(int ptnum, int type_idx)
+// {
+//     setpointattrib(0, GS_ATTRS_ENTITY_TYPE, ptnum, type_idx); // entity type idx
+//     setpointattrib(0, GS_ATTRS_PT_REMOVED, ptnum, 0);         // point removed
+//     setpointattrib(0, GS_ATTRS_VIABILITY, ptnum, gs_vegetation_get_viability(type_idx));         // viability
+//     setpointattrib(0, GS_ATTRS_VIABILITY_RADIUS, ptnum, gs_vegetation_get_viability_radius(type_idx));  // viability radius
+    
+// }
+
+
+//gs_vegetation_viability_selection(@ptnum, @P, GS_ATTR_VIABILITY_RADIUS, GS_ATTR_VIABILITY);
+void gs_vegetation_viability_selection(int ptnum; vector position; float viability_radius; float viability)
+{
+    //nearpoint(geometry, pt, maxdist)
+    int closepoints[] = nearpoints(0, pos, 10);
+    int closepoints_count = len(closepoints);
+
+    for(int i = 1; i < closepoints_count; i++)
+    {
+        int pt = closept[i];
+
+        float removed = point(0, GS_ATTRS_PT_REMOVED, pt);
+        if(removed > 0)
+            continue;
+
+        //point(geometry, attribute_name, pointnumber)
+        vector P1 = position;
+        vector P2 = point(0, "P", pt);
+        float vbRadius1 = viability_radius;
+        float vbRadius2 = point(0, GS_ATTRS_VIABILITY_RADIUS, pt);
+        float vb1 = viability;
+        float vb2 = point(0, GS_ATTRS_VIABILITY, pt);
+
+        float dis = distance2(P1, P2);
+        if(dis < (vbRadius1 + vbRadius2))
+        {
+            setpointattrib(0, GS_ATTRS_PT_REMOVED, pt, 1); // remove other point
+        }
+        else
+        {
+            setpointattrib(0, GS_ATTRS_PT_REMOVED, ptnum, 1); // remove myself
+        }
+    }
+}
+
+
+
+void gs_vegetation_heightfield_mask_merge(int foliage_idx; int layer_count; vector pos; heightfield_info hf_info)
+{
+    hf_info.init();
+
+    for(int i = 1; i <= layer_count; i++)
+    {
+        string volumename = "../../Viability_Layer_Name_";
+        volumename = volumename + itoa(1);
+        string volume = chs(volumename);
+        float tempmask = volumesample(0, volume, temp);
+        string ramp = "../../Attribute_Ramp__";
+        ramp = ramp + itoa(i);
+
+        if(volume == "Altitude")
+        {
+            //volumesample(filename, volumename, pos)
+            float tempheight = volumesample(0, 'height', pos);
+            float minHeight = 0;
+            float maxHeight = 0;
+
+            //getattribute(geometry, value, attribute_class, attribute_name, number, vertex_number)
+            getattribute(0, minHeight, "detail", "minHeight", 0, 0);
+            getattribute(0, maxHeight, "detail", "maxHeight", 0, 0);
+
+            //fit(value, omin, omax, nmin, nmax)
+            heightmask = fit(tempheight, minHeight, maxHeight, 0, 1);
+            //chramp(channel, ramppos, time)
+            newmask *= chramp(ramp, heightmask);
+        }
+        else // other layers
+        {
+            newmask *= chramp(ramp, tempmask);
+        }
+    }
+}
+
+void gs_foliage_point_data_finialize()
+{
+    // use age to get size
+
+    // from size to variant
+
+    // set unreal path base on the age and size variants
+
+    
+
+
+}

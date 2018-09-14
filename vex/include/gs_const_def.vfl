@@ -1,0 +1,13 @@
+//s@unreal_instance = "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea";
+
+#define const_def "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea3";
+
+
+
+#define GS_ATTRS_ENTITY_TYPE 'entity_type'
+#define GS_ATTRS_VIABILITY 'viability'
+#define GS_ATTR_VIABILITY @viability
+#define GS_ATTRS_VIABILITY_RADIUS 'viability_radius'
+#define GS_ATTR_VIABILITY_RADIUS @viablity_radius
+#define GS_ATTRS_PT_REMOVED 'pt_removed'
+#define GS_ATTR_PT_REMOVED @pt_removed
