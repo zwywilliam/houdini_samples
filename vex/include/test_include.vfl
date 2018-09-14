@@ -1,6 +1,13 @@
 //s@unreal_instance = "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea";
 
+#include "gs_const_def.vfl"
+
+struct tests
+{
+    int data[];
+}
+
 string get_testname()
 {
-    return "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea";
+    return const_def;
 }
