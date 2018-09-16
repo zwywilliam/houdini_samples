@@ -1,3 +1,5 @@
+#coding=utf-8
+
 import json
 
 import hou
@@ -6,6 +8,12 @@ geo = node.geometry()
 
 
 '''
+
+Integer01_# 结尾是数字，有_
+Integer#_#  如果后面结尾不是数字，没有_
+
+
+
 
 {
 "IntegerVal":{"t":"int","v":1},
@@ -47,13 +55,15 @@ class HoudiniParamJson(object):
             itemtype = v["t"]
             if itemtype == "ramp_float":
                 self.ramp_interpolate_arr(v["v"])
+                param = hou.node("../").parm(k)
                 rampobj = hou.Ramp(v["v"], v["x"], v["y"])
-                param.set(rampobj)
+                if param != None:
+                    param.set(rampobj)
             elif itemtype == "float_interval":
-                param = hou.node("../").parm(k+"_min")
+                param = hou.node("../").parm(k+"min")
                 if param != None:
                     param.set(v["v"])
-                param = hou.node("../").parm(k+"_max")
+                param = hou.node("../").parm(k+"max")
                 if param != None:
                     param.set(v["v1"])
             else:

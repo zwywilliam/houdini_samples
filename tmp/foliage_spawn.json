@@ -4,201 +4,201 @@
         "t": "int",
         "v": 0
     },
-    "FoliageTypes_ArrNum":
+    "ArrNum_FoliageTypes":
     {
         "t": "int_arr_count",
         "v": 2
     },
-    "ViabilityPriority_1":
+    "ViabilityPriority1":
     {
         "t": "float",
         "v": 0
     },
-    "VaibilityLayers_1_ArrNum":
+    "ArrNum_VaibilityLayers1":
     {
         "t": "int_arr_count",
         "v": 2
     },
-    "LayerName_1_1":
+    "LayerName1_1":
     {
         "t": "string",
         "v": "foliage_a"
     },
-    "LayerRamp_1_1":
+    "LayerRamp1_1":
     {
         "t": "ramp_float",
         "v": [ 1, 1, 1, 1 ],
         "x": [ 0.20249998569488525, 0.27125000953674316, 0.83499991893768311, 0.95599997043609619 ],
         "y": [ 0, 1.0060000419616699, 1.0060000419616699, -0.0016000270843505859 ]
     },
-    "LayerName_1_2":
+    "LayerName1_2":
     {
         "t": "string",
         "v": "slope"
     },
-    "LayerRamp_1_2":
+    "LayerRamp1_2":
     {
         "t": "ramp_float",
         "v": [ 4, 1, 1, 1 ],
         "x": [ 0.21915093064308167, 0.30368465185165405, 0.88449990749359131, 0.98074984550476074 ],
         "y": [ 0.00054442882537841797, 1.0024244785308838, 1.0060000419616699, -0.0059999227523803711 ]
     },
-    "SizeVariants_1_ArrNum":
+    "ArrNum_SizeVariants1":
     {
         "t": "int_arr_count",
         "v": 2
     },
-    "MeshAsset_1_1":
+    "MeshAsset1_1":
     {
         "t": "path",
         "v": "/Game/Environment/Foliages/Speedtree/Models/Acacia_Low.Acacia_Low"
     },
-    "MeshAssetScale_1_1":
+    "MeshAssetScale1_1":
     {
         "t": "float",
         "v": 0
     },
-    "SizeRadius_1_1":
+    "SizeRadius1_1":
     {
         "t": "float",
         "v": 100
     },
-    "ScaleRandom_1_1":
+    "ScaleRandom1_1":
     {
         "t": "float_interval",
         "v": 0.0010000000474974513,
         "v1": 1
     },
-    "TestArrays_1_1_ArrNum":
+    "ArrNum_TestArrays1_1":
     {
         "t": "int_arr_count",
         "v": 0
     },
-    "MeshAsset_1_2":
+    "MeshAsset1_2":
     {
         "t": "path",
         "v": "/Game/Environment/Foliages/Speedtree/Models/AfricanOlive_Shrub_Low.AfricanOlive_Shrub_Low"
     },
-    "MeshAssetScale_1_2":
+    "MeshAssetScale1_2":
     {
         "t": "float",
         "v": 0
     },
-    "SizeRadius_1_2":
+    "SizeRadius1_2":
     {
         "t": "float",
         "v": 0
     },
-    "ScaleRandom_1_2":
+    "ScaleRandom1_2":
     {
         "t": "float_interval",
         "v": 3.4028234663852886e+38,
         "v1": -3.4028234663852886e+38
     },
-    "TestArrays_1_2_ArrNum":
+    "ArrNum_TestArrays1_2":
     {
         "t": "int_arr_count",
         "v": 0
     },
-    "AgeRamp_1":
+    "AgeRamp1":
     {
         "t": "ramp_float",
         "v": [],
         "x": [],
         "y": []
     },
-    "ViabilityPriority_2":
+    "ViabilityPriority2":
     {
         "t": "float",
         "v": 0
     },
-    "VaibilityLayers_2_ArrNum":
+    "ArrNum_VaibilityLayers2":
     {
         "t": "int_arr_count",
         "v": 2
     },
-    "LayerName_2_1":
+    "LayerName2_1":
     {
         "t": "string",
         "v": "foliage_a"
     },
-    "LayerRamp_2_1":
+    "LayerRamp2_1":
     {
         "t": "ramp_float",
         "v": [ 1, 1, 1, 1 ],
         "x": [ 0.20249998569488525, 0.27125000953674316, 0.83499991893768311, 0.95599997043609619 ],
         "y": [ 0, 1.0060000419616699, 1.0060000419616699, -0.0016000270843505859 ]
     },
-    "LayerName_2_2":
+    "LayerName2_2":
     {
         "t": "string",
         "v": "slope"
     },
-    "LayerRamp_2_2":
+    "LayerRamp2_2":
     {
         "t": "ramp_float",
         "v": [ 4, 1, 1, 1 ],
         "x": [ 0.21915093064308167, 0.30368465185165405, 0.88449990749359131, 0.98074984550476074 ],
         "y": [ 0.00054442882537841797, 1.0024244785308838, 1.0060000419616699, -0.0059999227523803711 ]
     },
-    "SizeVariants_2_ArrNum":
+    "ArrNum_SizeVariants2":
     {
         "t": "int_arr_count",
         "v": 2
     },
-    "MeshAsset_2_1":
+    "MeshAsset2_1":
     {
         "t": "path",
         "v": "/Game/Environment/Foliages/Speedtree/Models/Acacia_Low.Acacia_Low"
     },
-    "MeshAssetScale_2_1":
+    "MeshAssetScale2_1":
     {
         "t": "float",
         "v": 0
     },
-    "SizeRadius_2_1":
+    "SizeRadius2_1":
     {
         "t": "float",
         "v": 100
     },
-    "ScaleRandom_2_1":
+    "ScaleRandom2_1":
     {
         "t": "float_interval",
         "v": 0.0010000000474974513,
         "v1": 1
     },
-    "TestArrays_2_1_ArrNum":
+    "ArrNum_TestArrays2_1":
     {
         "t": "int_arr_count",
         "v": 0
     },
-    "MeshAsset_2_2":
+    "MeshAsset2_2":
     {
         "t": "path",
         "v": "/Game/Environment/Foliages/Speedtree/Models/AfricanOlive_Shrub_Low.AfricanOlive_Shrub_Low"
     },
-    "MeshAssetScale_2_2":
+    "MeshAssetScale2_2":
     {
         "t": "float",
         "v": 0
     },
-    "SizeRadius_2_2":
+    "SizeRadius2_2":
     {
         "t": "float",
         "v": 0
     },
-    "ScaleRandom_2_2":
+    "ScaleRandom2_2":
     {
         "t": "float_interval",
         "v": 3.4028234663852886e+38,
         "v1": -3.4028234663852886e+38
     },
-    "TestArrays_2_2_ArrNum":
+    "ArrNum_TestArrays2_2":
     {
         "t": "int_arr_count",
         "v": 0
     },
-    "AgeRamp_2":
+    "AgeRamp2":
     {
         "t": "ramp_float",
         "v": [],
@@ -210,88 +210,88 @@
         "t": "float",
         "v": 0
     },
-    "VaibilityLayers_ArrNum":
+    "ArrNum_VaibilityLayers":
     {
         "t": "int_arr_count",
         "v": 2
     },
-    "LayerName_1":
+    "LayerName1":
     {
         "t": "string",
         "v": "foliage_a"
     },
-    "LayerRamp_1":
+    "LayerRamp1":
     {
         "t": "ramp_float",
         "v": [ 1, 1, 1, 1 ],
         "x": [ 0.20249998569488525, 0.27125000953674316, 0.83499991893768311, 0.95599997043609619 ],
         "y": [ 0, 1.0060000419616699, 1.0060000419616699, -0.0016000270843505859 ]
     },
-    "LayerName_2":
+    "LayerName2":
     {
         "t": "string",
         "v": "slope"
     },
-    "LayerRamp_2":
+    "LayerRamp2":
     {
         "t": "ramp_float",
         "v": [ 4, 1, 1, 1 ],
         "x": [ 0.21915093064308167, 0.30368465185165405, 0.88449990749359131, 0.98074984550476074 ],
         "y": [ 0.00054442882537841797, 1.0024244785308838, 1.0060000419616699, -0.0059999227523803711 ]
     },
-    "SizeVariants_ArrNum":
+    "ArrNum_SizeVariants":
     {
         "t": "int_arr_count",
         "v": 2
     },
-    "MeshAsset_1":
+    "MeshAsset1":
     {
         "t": "path",
         "v": "/Game/Environment/Foliages/Speedtree/Models/Acacia_Low.Acacia_Low"
     },
-    "MeshAssetScale_1":
+    "MeshAssetScale1":
     {
         "t": "float",
         "v": 0
     },
-    "SizeRadius_1":
+    "SizeRadius1":
     {
         "t": "float",
         "v": 100
     },
-    "ScaleRandom_1":
+    "ScaleRandom1":
     {
         "t": "float_interval",
         "v": 0.0010000000474974513,
         "v1": 1
     },
-    "TestArrays_1_ArrNum":
+    "ArrNum_TestArrays1":
     {
         "t": "int_arr_count",
         "v": 0
     },
-    "MeshAsset_2":
+    "MeshAsset2":
     {
         "t": "path",
         "v": "/Game/Environment/Foliages/Speedtree/Models/AfricanOlive_Shrub_Low.AfricanOlive_Shrub_Low"
     },
-    "MeshAssetScale_2":
+    "MeshAssetScale2":
     {
         "t": "float",
         "v": 0
     },
-    "SizeRadius_2":
+    "SizeRadius2":
     {
         "t": "float",
         "v": 0
     },
-    "ScaleRandom_2":
+    "ScaleRandom2":
     {
         "t": "float_interval",
         "v": 3.4028234663852886e+38,
         "v1": -3.4028234663852886e+38
     },
-    "TestArrays_2_ArrNum":
+    "ArrNum_TestArrays2":
     {
         "t": "int_arr_count",
         "v": 0
