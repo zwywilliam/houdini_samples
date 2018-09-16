@@ -19,24 +19,24 @@
         "t": "int_arr_count",
         "v": 2
     },
-    "LayerName1_1":
+    "ViabilityLayerName1_1":
     {
         "t": "string",
         "v": "foliage_a"
     },
-    "LayerRamp1_1":
+    "ViabilityLayerRamp1_1":
     {
         "t": "ramp_float",
         "v": [ 1, 1, 1, 1 ],
         "x": [ 0.20249998569488525, 0.27125000953674316, 0.83499991893768311, 0.95599997043609619 ],
         "y": [ 0, 1.0060000419616699, 1.0060000419616699, -0.0016000270843505859 ]
     },
-    "LayerName1_2":
+    "ViabilityLayerName1_2":
     {
         "t": "string",
         "v": "slope"
     },
-    "LayerRamp1_2":
+    "ViabilityLayerRamp1_2":
     {
         "t": "ramp_float",
         "v": [ 4, 1, 1, 1 ],
@@ -117,24 +117,24 @@
         "t": "int_arr_count",
         "v": 2
     },
-    "LayerName2_1":
+    "ViabilityLayerName2_1":
     {
         "t": "string",
         "v": "foliage_a"
     },
-    "LayerRamp2_1":
+    "ViabilityLayerRamp2_1":
     {
         "t": "ramp_float",
         "v": [ 1, 1, 1, 1 ],
         "x": [ 0.20249998569488525, 0.27125000953674316, 0.83499991893768311, 0.95599997043609619 ],
         "y": [ 0, 1.0060000419616699, 1.0060000419616699, -0.0016000270843505859 ]
     },
-    "LayerName2_2":
+    "ViabilityLayerName2_2":
     {
         "t": "string",
         "v": "slope"
     },
-    "LayerRamp2_2":
+    "ViabilityLayerRamp2_2":
     {
         "t": "ramp_float",
         "v": [ 4, 1, 1, 1 ],
@@ -215,24 +215,24 @@
         "t": "int_arr_count",
         "v": 2
     },
-    "LayerName1":
+    "ViabilityLayerName1":
     {
         "t": "string",
         "v": "foliage_a"
     },
-    "LayerRamp1":
+    "ViabilityLayerRamp1":
     {
         "t": "ramp_float",
         "v": [ 1, 1, 1, 1 ],
         "x": [ 0.20249998569488525, 0.27125000953674316, 0.83499991893768311, 0.95599997043609619 ],
         "y": [ 0, 1.0060000419616699, 1.0060000419616699, -0.0016000270843505859 ]
     },
-    "LayerName2":
+    "ViabilityLayerName2":
     {
         "t": "string",
         "v": "slope"
     },
-    "LayerRamp2":
+    "ViabilityLayerRamp2":
     {
         "t": "ramp_float",
         "v": [ 4, 1, 1, 1 ],

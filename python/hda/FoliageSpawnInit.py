@@ -1,7 +1,8 @@
 from gscore.HoudiniParamJson import HoudiniParamJson
 
 import os
-
+import terraintoolutils
+import hou
 
 
 class FoliageSpawnInit(object):
@@ -14,3 +15,13 @@ class FoliageSpawnInit(object):
         hjson.load_parameter_and_apply(hippath + "/tmp/foliage_spawn.json")
         #hjson.load_detail_and_apply(hippath + "/tmp/foliage_spawn.json")
         
+        node = hou.pwd()
+        geo = node.geometry()
+        range = terraintoolutils.computeInputRange(node, 'height')
+
+        if geo.findPrimAttrib("minHeight") == None:
+            geo.addAttrib(hou.attribType.Global, "minHeight", range[0])
+            geo.addAttrib(hou.attribType.Global, "maxHeight", range[1])
+        else:
+            geo.setGlobalAttrib("minHeight", range[0])
+            geo.setGlobalAttrib("maxHeight", range[1])

@@ -34,19 +34,23 @@ struct vegetation_type_info
     }
 }
 
-struct vegetation_mask_info
+struct foliage_mask_info
 {
     float layer_ao;
     float layer_height;
     float layer_flow;
     float layer_move;
+    float layer_viability;
 }
 
 
-struct vegetation_point_info
+struct foliage_point_info
 {
     vegetation_type_info type_info;
+    int pt_num = 0;
     float removed = 0.0f;
+    float age = 0.0f;
+    string unreal_path = "";
 }
 
 struct heightfield_info
@@ -115,7 +119,11 @@ void gs_vegetation_viability_selection(int ptnum; vector position; float viabili
     }
 }
 
-
+/*
+mask can be:
+user painted : plant, clearplant
+auto generate : height, flow, ao, altitude, slope
+*/
 
 void gs_vegetation_heightfield_mask_merge(int foliage_idx; int layer_count; vector pos; heightfield_info hf_info)
 {
@@ -123,11 +131,11 @@ void gs_vegetation_heightfield_mask_merge(int foliage_idx; int layer_count; vect
 
     for(int i = 1; i <= layer_count; i++)
     {
-        string volumename = "../../Viability_Layer_Name_";
+        string volumename = "../../ViabilityLayerName";
         volumename = volumename + itoa(1);
         string volume = chs(volumename);
         float tempmask = volumesample(0, volume, temp);
-        string ramp = "../../Attribute_Ramp__";
+        string ramp = "../../ViabilityLayerRamp";
         ramp = ramp + itoa(i);
 
         if(volume == "Altitude")
@@ -153,15 +161,25 @@ void gs_vegetation_heightfield_mask_merge(int foliage_idx; int layer_count; vect
     }
 }
 
-void gs_foliage_point_data_finialize()
+void gs_foliage_point_finialize(foliage_point_info pt_info)
 {
     // use age to get size
+    float prefer_size = chramp("../../AgeRamp"+itoa(), pt_info.age);
 
     // from size to variant
+    int variant_count = chi("../../ArrNum_SizeVariants");
+    int best_idx = 1;
+    float best_size_diff = 9999;
+    for(int i = 1; i <= variant_count; i++)
+    {
+        float size_radius = ch("../../SizeRadius"+itoa(i));
+        float size_diff = abs(size_radius - prefer_size);
+        if(size_diff < best_size_diff)
+        {
+            best_idx = i;
+        }
+    }
 
     // set unreal path base on the age and size variants
-
-    
-
-
+    pt_info.unreal_path = chs("MeshAsset"+itoa(best_idx));
 }
