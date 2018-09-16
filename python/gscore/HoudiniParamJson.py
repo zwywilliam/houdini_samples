@@ -45,11 +45,40 @@ class HoudiniParamJson(object):
         for (k,v) in items.items(): 
             #geo.addAttrib(hou.attribType.Global, k, v)
             itemtype = v["t"]
-            if itemtype == "ramp":
-                self:ramp_interpolate_arr(v["v"][0])
-                rampobj = hou.Ramp(v["v"][0], v["v"][1], v["v"][2])
+            if itemtype == "ramp_float":
+                self.ramp_interpolate_arr(v["v"])
+                rampobj = hou.Ramp(v["v"], v["x"], v["y"])
                 param.set(rampobj)
+            elif itemtype == "float_interval":
+                param = hou.node("../").parm(k+"_min")
+                if param != None:
+                    param.set(v["v"])
+                param = hou.node("../").parm(k+"_max")
+                if param != None:
+                    param.set(v["v1"])
             else:
                 param = hou.node("../").parm(k)
                 if param != None:
                     param.set(v["v"])
+
+    def load_detail_and_apply(self, path):
+        # this function is for debug purpose
+
+        f = open(path)
+        jsontxt = f.read()
+        f.close()
+        print jsontxt
+        items = json.loads(jsontxt)
+
+        for (k,v) in items.items(): 
+            print k
+            #geo.addAttrib(hou.attribType.Global, k, v)
+            itemtype = v["t"]
+            if itemtype == "ramp_float":
+                pass
+            elif itemtype == "float_interval":
+                pass
+            else:
+                geo.addAttrib(hou.attribType.Global, k, v["v"])
+                print k
+                print v
