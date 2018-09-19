@@ -1,11 +1,7 @@
 #include "gs_const_def.vfl"
 
-struct entity_size_variant
-{
-    string unreal_path = "";
-}
 
-struct vegetation_type_info
+struct foliage_type_info
 {
     float viability = 0.0f;
     float viability_radius = 0.0f;
@@ -14,8 +10,6 @@ struct vegetation_type_info
     int can_under_shade = 0;
     float scale_min = 0.9f;
     float scale_max = 1.1f;
-
-    
 
     void init_viability()
     {
@@ -46,11 +40,54 @@ struct foliage_mask_info
 
 struct foliage_point_info
 {
-    vegetation_type_info type_info;
     int pt_num = 0;
+    int foliage_idx = 0;
+    int size_variant = 0;
     float removed = 0.0f;
     float age = 0.0f;
+    float viability = 0.0f;
+    float viability_radius = 1.0f;
     string unreal_path = "";
+
+    void init_from_heightfield(int ptnum; vector position; int foliage_idx)
+    {
+        string foliage_idx_s = itoa(foliage_idx);
+
+        // viability from mask and foliage data
+        viability = volumesample(1, "mask", position);
+
+        // age
+        age = volumesample(1, "age", position);
+
+        // use age to get size
+        float prefer_size = chramp("../FoliageTypes_AgeRamp"+foliage_idx_s, age);
+
+        // from size to variant
+        int variant_count = chi("../ArrNum_FoliageTypes_SizeVariants"+foliage_idx_s);
+        int best_idx = 1;
+        float best_size_diff = 9999;
+        for(int i = 1; i <= variant_count; i++)
+        {
+            float size_radius = ch("../FoliageTypes_SizeVariants_SizeRadius" + foliage_idx_s + '_' + itoa(i));
+            float size_diff = abs(size_radius - prefer_size);
+            if(size_diff < best_size_diff)
+            {
+                best_idx = i;
+            }
+        }
+
+        size_variant = best_idx;
+
+        string surfix = foliage_idx_s+'_'+itoa(size_variant);
+
+        // viability radius
+        viability_radius = ch("../FoliageTypes_SizeVariants_SizeRadius"+surfix);
+
+        // set unreal path base on the age and size variants
+        unreal_path = chs("FoliageTypes_SizeVariants_MeshAsset"+surfix);
+
+        // TODO : pass attribute to unreal with uproperty mecham and instancing data(point color)
+    }
 }
 
 struct heightfield_info
@@ -60,40 +97,71 @@ struct heightfield_info
 
     void init()
     {
-        ;
+        min_height = detail(geoself(), "minHeight");
+        max_height = detail(geoself(), "maxHeight");
     }
 }
 
 
 
-// void gs_vegetation_mask_init(int ptnum, int type_idx)
-// {
 
-// }
+/*
+mask can be:
+user painted : plant, clearplant
+auto generate : height, flow, ao, altitude, slope
+*/
+float gs_vegetation_heightfield_mask_merge(int foliage_idx; vector pos; heightfield_info hf_info)
+{
+    hf_info->init();
 
+    float newmask = 1;
+    string foliage_idx_s = itoa(foliage_idx);
+    int layer_count = chi("../ArrNum_FoliageTypes_VaibilityLayers" + foliage_idx_s);
 
+    //printf("layer_count%d", layer_count);
+    //print_once(sprintf("layer_count%d", layer_count));
 
+    // for each viability layer settings
+    for(int i = 1; i <= layer_count; i++)
+    {
+        string volumename = "../FoliageTypes_VaibilityLayers_LayerName"+foliage_idx_s+'_'+itoa(i);
+        string volume = chs(volumename);
+        float tempmask = volumesample(0, volume, pos);
+        string ramp = "../FoliageTypes_VaibilityLayers_WeightRamp"+foliage_idx_s+'_'+itoa(i);
 
-// void gs_vegetation_point_init(int ptnum, int type_idx)
-// {
-//     setpointattrib(0, GS_ATTRS_ENTITY_TYPE, ptnum, type_idx); // entity type idx
-//     setpointattrib(0, GS_ATTRS_PT_REMOVED, ptnum, 0);         // point removed
-//     setpointattrib(0, GS_ATTRS_VIABILITY, ptnum, gs_vegetation_get_viability(type_idx));         // viability
-//     setpointattrib(0, GS_ATTRS_VIABILITY_RADIUS, ptnum, gs_vegetation_get_viability_radius(type_idx));  // viability radius
-    
-// }
+        if(volume == "altitude") // altitude layer need to fit with height range
+        {
+            //volumesample(filename, volumename, pos)
+            float tempheight = volumesample(0, 'height', pos);
+
+            //fit(value, omin, omax, nmin, nmax)
+            float heightmask = fit(tempheight, hf_info.min_height, hf_info.max_height, 0, 1);
+            //chramp(channel, ramppos, time)
+            newmask = chramp(ramp, heightmask);
+        }
+        else // other layers
+        {
+            newmask *= chramp(ramp, tempmask);
+        }
+    }
+
+    return newmask;
+}
 
 
 //gs_vegetation_viability_selection(@ptnum, @P, GS_ATTR_VIABILITY_RADIUS, GS_ATTR_VIABILITY);
 void gs_vegetation_viability_selection(int ptnum; vector position; float viability_radius; float viability)
 {
     //nearpoint(geometry, pt, maxdist)
-    int closepoints[] = nearpoints(0, pos, 10);
+    int closepoints[] = nearpoints(0, position, 10);
     int closepoints_count = len(closepoints);
 
-    for(int i = 1; i < closepoints_count; i++)
+    //printf("count%d", closepoints_count);
+
+    // find close points and compare viability
+    for(int i = 1; i <= closepoints_count; i++)
     {
-        int pt = closept[i];
+        int pt = closepoints[i];
 
         float removed = point(0, GS_ATTRS_PT_REMOVED, pt);
         if(removed > 0)
@@ -119,67 +187,12 @@ void gs_vegetation_viability_selection(int ptnum; vector position; float viabili
     }
 }
 
-/*
-mask can be:
-user painted : plant, clearplant
-auto generate : height, flow, ao, altitude, slope
-*/
 
-void gs_vegetation_heightfield_mask_merge(int foliage_idx; int layer_count; vector pos; heightfield_info hf_info)
+void gs_foliage_remove_finalize(int ptnum; float removed)
 {
-    hf_info.init();
-
-    for(int i = 1; i <= layer_count; i++)
+    if (removed > 0.0f)
     {
-        string volumename = "../../ViabilityLayerName";
-        volumename = volumename + itoa(1);
-        string volume = chs(volumename);
-        float tempmask = volumesample(0, volume, temp);
-        string ramp = "../../ViabilityLayerRamp";
-        ramp = ramp + itoa(i);
-
-        if(volume == "Altitude")
-        {
-            //volumesample(filename, volumename, pos)
-            float tempheight = volumesample(0, 'height', pos);
-            float minHeight = 0;
-            float maxHeight = 0;
-
-            //getattribute(geometry, value, attribute_class, attribute_name, number, vertex_number)
-            getattribute(0, minHeight, "detail", "minHeight", 0, 0);
-            getattribute(0, maxHeight, "detail", "maxHeight", 0, 0);
-
-            //fit(value, omin, omax, nmin, nmax)
-            heightmask = fit(tempheight, minHeight, maxHeight, 0, 1);
-            //chramp(channel, ramppos, time)
-            newmask *= chramp(ramp, heightmask);
-        }
-        else // other layers
-        {
-            newmask *= chramp(ramp, tempmask);
-        }
+        removepoint(0, ptnum);
     }
 }
 
-void gs_foliage_point_finialize(foliage_point_info pt_info)
-{
-    // use age to get size
-    float prefer_size = chramp("../../AgeRamp"+itoa(), pt_info.age);
-
-    // from size to variant
-    int variant_count = chi("../../ArrNum_SizeVariants");
-    int best_idx = 1;
-    float best_size_diff = 9999;
-    for(int i = 1; i <= variant_count; i++)
-    {
-        float size_radius = ch("../../SizeRadius"+itoa(i));
-        float size_diff = abs(size_radius - prefer_size);
-        if(size_diff < best_size_diff)
-        {
-            best_idx = i;
-        }
-    }
-
-    // set unreal path base on the age and size variants
-    pt_info.unreal_path = chs("MeshAsset"+itoa(best_idx));
-}

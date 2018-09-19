@@ -10,10 +10,15 @@ class FoliageSpawnInit(object):
         pass
 
     def run(self):
-        hjson = HoudiniParamJson()
-        hippath = os.getenv('HIP', "unknown path")
-        hjson.load_parameter_and_apply(hippath + "/tmp/foliage_spawn.json")
-        #hjson.load_detail_and_apply(hippath + "/tmp/foliage_spawn.json")
+        parmUseJsonInput = hou.node("../").parm("UseJsonInput")
+        if parmUseJsonInput != None:
+            valUseJsonInput = parmUseJsonInput.evalAsInt()
+            if valUseJsonInput > 0:
+                hjson = HoudiniParamJson()
+                hippath = os.getenv('HIP', "unknown path")
+                hjson.load_parameter_and_apply(hippath + "/tmp/foliage_spawn.json")
+                #hjson.load_detail_and_apply(hippath + "/tmp/foliage_spawn.json")
+
         
         node = hou.pwd()
         geo = node.geometry()

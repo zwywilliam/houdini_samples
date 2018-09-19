@@ -121,11 +121,11 @@ kernel void kernelName(
                  float height_voxelsize_y, 
                  float height_voxelsize_z, 
                  global float * height,
-                 int ao_stride_x, 
-                 int ao_stride_y, 
-                 int ao_stride_z, 
-                 int ao_stride_offset, 
-                 global float * ao,
+                 int layer_ao_stride_x, 
+                 int layer_ao_stride_y, 
+                 int layer_ao_stride_z, 
+                 int layer_ao_stride_offset, 
+                 global float * layer_ao,
                  float max_distance,
                  int samples,
                  float angle,
@@ -185,12 +185,12 @@ kernel void kernelName(
     }
     
     // Compute the AO value by dividing the hit sample and the number of samples.
-    float ao_value = hit_samples / ((float)samples * (float)samples);
+    float layer_ao_value = hit_samples / ((float)samples * (float)samples);
     
     // Post-processing
-    ao_value = pow(ao_value, power);
-    ao_value = clamp(ao_value, 0.0f, 1.0f);
-    ao_value = 1 - ao_value;
+    layer_ao_value = pow(layer_ao_value, power);
+    layer_ao_value = clamp(layer_ao_value, 0.0f, 1.0f);
+    layer_ao_value = 1 - layer_ao_value;
     
-    ao[idx] = ao_value;
+    layer_ao[idx] = layer_ao_value;
 }
