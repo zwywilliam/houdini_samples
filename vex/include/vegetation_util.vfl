@@ -47,17 +47,23 @@ struct foliage_point_info
     float age = 0.0f;
     float viability = 0.0f;
     float viability_radius = 1.0f;
+    vector preview_color = {1,1,1};
     string unreal_path = "";
 
-    void init_from_heightfield(int ptnum; vector position; int foliage_idx)
+    // 0 is point cloud, 1 is heightfield
+    void init_from_heightfield(int ptnum; vector position; int foliage_type_idx)
     {
+        foliage_idx = foliage_type_idx;
         string foliage_idx_s = itoa(foliage_idx);
 
+        vector flatpos = position;
+        flatpos.y = 0; // heightfield need flatten pos to sample
+
         // viability from mask and foliage data
-        viability = volumesample(1, "mask", position);
+        viability = volumesample(1, "mask", flatpos);
 
         // age
-        age = volumesample(1, "age", position);
+        age = volumesample(1, "age", flatpos);
 
         // use age to get size
         float prefer_size = chramp("../FoliageTypes_AgeRamp"+foliage_idx_s, age);
@@ -66,6 +72,8 @@ struct foliage_point_info
         int variant_count = chi("../ArrNum_FoliageTypes_SizeVariants"+foliage_idx_s);
         int best_idx = 1;
         float best_size_diff = 9999;
+
+
         for(int i = 1; i <= variant_count; i++)
         {
             float size_radius = ch("../FoliageTypes_SizeVariants_SizeRadius" + foliage_idx_s + '_' + itoa(i));
@@ -84,7 +92,8 @@ struct foliage_point_info
         viability_radius = ch("../FoliageTypes_SizeVariants_SizeRadius"+surfix);
 
         // set unreal path base on the age and size variants
-        unreal_path = chs("FoliageTypes_SizeVariants_MeshAsset"+surfix);
+        unreal_path = chs("../FoliageTypes_SizeVariants_MeshAsset"+surfix);
+        preview_color = chv("../FoliageTypes_PreviewColor"+foliage_idx_s);
 
         // TODO : pass attribute to unreal with uproperty mecham and instancing data(point color)
     }
@@ -157,6 +166,7 @@ void gs_vegetation_viability_selection(int ptnum; vector position; float viabili
     int closepoints_count = len(closepoints);
 
     //printf("count%d", closepoints_count);
+    //print_once(sprintf("count%d", closepoints_count));
 
     // find close points and compare viability
     for(int i = 1; i <= closepoints_count; i++)
