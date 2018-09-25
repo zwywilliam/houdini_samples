@@ -51,7 +51,7 @@ inputs
 stat
 {
   create 1535527433
-  modify 1537623914
+  modify 1537844586
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1222,7 +1222,7 @@ inputs
 stat
 {
   create 1536585179
-  modify 1537447522
+  modify 1537844253
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1685,7 +1685,7 @@ inputs
 stat
 {
   create 1535344789
-  modify 1537608475
+  modify 1537844254
   author Win10base@wenyong-pc
   access 0777
 }
@@ -2415,7 +2415,7 @@ inputs
 stat
 {
   create 1518041003
-  modify 1537615552
+  modify 1537844190
   author cs@RWC-WKS-001
   access 0777
 }
@@ -2583,7 +2583,7 @@ sopflags sopflags =
 comment ""
 position -2.77556e-17 4.96503
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
@@ -2599,7 +2599,7 @@ inputs
 stat
 {
   create 1516646289
-  modify 1537171304
+  modify 1537844191
   author cs@RWC-WKS-001
   access 0777
 }
@@ -2659,7 +2659,7 @@ version 0.8
 stdswitcher	[ 0	locks=0 ]	(	0	0	0	)
 kernelname	[ 0	locks=0 ]	(	kernelName	)
 usecode	[ 0	locks=0 ]	(	"off"	)
-kernelfile	[ 0	locks=0 ]	(	$HIP/ocl/heightfield_ao.cl	)
+kernelfile	[ 0	locks=0 ]	(	$GS_HIP_FOLDER/ocl/heightfield_ao.cl	)
 kernelcode	[ 0	locks=0 ]	(	"// Following numbers assume a 1024x1024 heightfield
 //
 // height_stride_offset is the total number of voxel. 1024x1024=1048576 in a 1k heightfield.
@@ -2857,7 +2857,7 @@ kernel void kernelName(
     ao[idx] = ao_value;
 }
 "	)
-kerneloptions	[ 0	locks=0 ]	(	-I$HIP/ocl/	)
+kerneloptions	[ 0	locks=0 ]	(	-I$GS_HIP_FOLDER/ocl/	)
 usewritebackkernel	[ 0	locks=0 ]	(	"off"	)
 writebackkernelname	[ 0	locks=0 ]	(	writeBack	)
 generatekernel	[ 0	locks=0 ]	(	0	)
@@ -3165,7 +3165,7 @@ sopflags sopflags =
 comment ""
 position -2.77556e-17 3.83553
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault off exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
 {
 1 "output1"
@@ -3181,7 +3181,7 @@ inputs
 stat
 {
   create 1518041009
-  modify 1518198652
+  modify 1537844190
   author cs@RWC-WKS-001
   access 0777
 }
@@ -3305,7 +3305,7 @@ sopflags sopflags =
 comment ""
 position -1.23159 -35.9121
 connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 }
@@ -3320,7 +3320,7 @@ inputs
 stat
 {
   create 1536153767
-  modify 1537615859
+  modify 1537844253
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3379,7 +3379,7 @@ inputs
 stat
 {
   create 1536153767
-  modify 1537616221
+  modify 1537844251
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3430,16 +3430,16 @@ outputsNamed3
 }
 inputsNamed3
 {
-1 	switch2 1 1 "input1"
+1 	python2 1 1 "input1"
 }
 inputs
 {
-0 	switch2 0 1
+0 	python2 0 1
 }
 stat
 {
   create 1537085203
-  modify 1537623837
+  modify 1537844247
   author zwybo@wenyong-tpx1c
   access 0777
 }
@@ -3461,9 +3461,7 @@ geo = node.geometry()
 # Use drop down menu to select examples.
 import sys
 import os
-sys.path.append(\"$HIP/python\")
-
-print os.path.expandvars('$HIP/python')
+sys.path.append(\"$GS_HDA_FOLDER/python\")
 
 import hda.FoliageSpawnInit
 reload(hda.FoliageSpawnInit)
@@ -3674,7 +3672,7 @@ inputs
 stat
 {
   create 1537358813
-  modify 1537623860
+  modify 1537844245
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3735,7 +3733,7 @@ inputs
 stat
 {
   create 1537358813
-  modify 1537623860
+  modify 1537844245
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3841,7 +3839,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -5.80076 9.82251
+position -6.24883 12.9133
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3859,7 +3857,7 @@ inputs
 stat
 {
   create 1535721494
-  modify 1537614906
+  modify 1537843469
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3977,7 +3975,7 @@ sopflags sopflags =
 comment 布置点
 position -11.9304 -2.43021
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
 {
 1 "output1"
@@ -3993,7 +3991,7 @@ inputs
 stat
 {
   create 1535377292
-  modify 1537616337
+  modify 1537844064
   author Win10base@wenyong-pc
   access 0777
 }
@@ -4222,10 +4220,82 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python2.init"
+Content-Type: text/plain
+
+type = python
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "初始化HDA Script环境变量"
+position -5.99262 10.8168
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	switch2 1 1 "input1"
+}
+inputs
+{
+0 	switch2 0 1
+}
+stat
+{
+  create 1537843477
+  modify 1537844203
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+python	[ 0	locks=0 ]	(	"node = hou.pwd()
+geo = node.geometry()
+
+# Add code to modify contents of geo.
+# Use drop down menu to select examples.
+
+import os
+
+hda_path = hou.node(\"../\").type().definition().libraryFilePath()
+hou.putenv(\"GS_HDA_PATH\", hda_path)
+hou.putenv(\"GS_HDA_FOLDER\", os.path.dirname(hda_path))
+hou.putenv(\"GS_HIP_FOLDER\", os.path.dirname(hou.getenv(\"GS_HDA_FOLDER\")))
+hou.putenv(\"GS_OCL_FOLDER\", os.path.join(hou.getenv(\"GS_HDA_FOLDER\"), \"ocl\"))"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-37
+38
 heightfield_noise1
 box1
 copytopoints1
@@ -4263,6 +4333,7 @@ group1
 blast2
 heightfield_maskbyobject1
 attribwrangle5
+python2
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.net"
