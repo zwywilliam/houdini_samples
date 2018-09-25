@@ -1,0 +1,52 @@
+# Dialog script for foliage_spawn automatically generated
+
+{
+    name	foliage_spawn
+    script	foliage_spawn
+    label	"Foliage spawn"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "Integer01"
+        label   "Integer01"
+        type    intlog
+        default { "1" }
+        range   { 1 1000 }
+    }
+    multiparm {
+        name    "folder0"
+        label    "Folder Name"
+
+        parm {
+            name    "IntegerMul01_#"
+            label   "IntegerMul01"
+            type    integer
+            default { "0" }
+            range   { 0 10 }
+        }
+        parm {
+            name    "RampMul01_#"
+            label   "RampMul01"
+            type    ramp_flt
+            default { "2" }
+            range   { 1! 10 }
+        }
+        parm {
+            name    "FloatMinMax#"
+            label   "FloatMinMax"
+            type    float_minmax
+            size    2
+            default { "0" "0" }
+            range   { 0 10 }
+        }
+    }
+
+}

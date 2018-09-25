@@ -1,0 +1,170 @@
+# Dialog script for generate_terrain_entities automatically generated
+
+{
+    name	generate_terrain_entities
+    script	generate_terrain_entities
+    label	"Generate terrain entities"
+
+    help {
+	""
+    }
+
+    inputlabel	1	HeightField
+    inputlabel	2	SceneMesh
+    inputlabel	3	PointCloud
+    inputlabel	4	"Sub-Network Input #4"
+    outputlabel	1	TerrainVisual
+    outputlabel	2	HeightField
+    outputlabel	3	PointCloud
+
+    groupsimple {
+        name    "folder0"
+        label   "Basic"
+
+        parm {
+            name    "UseJsonInput"
+            label   "UseJsonInput"
+            type    toggle
+            default { "0" }
+        }
+        parm {
+            name    "RandomSeed"
+            label   "RandomSeed"
+            type    integer
+            default { "0" }
+            range   { 0 10 }
+        }
+    }
+
+    multiparm {
+        name    "ArrNum_FoliageTypes"
+        label    "FoliageTypes"
+
+        group {
+            name    "folder1_#"
+            label   "Basic"
+
+            parm {
+                name    "FoliageTypes_AngleRange#"
+                label   "Angle Range"
+                type    float_minmax
+                size    2
+                default { "0" "0" }
+                range   { 0 10 }
+            }
+        }
+
+        group {
+            name    "folder6_#"
+            label   "Viability"
+
+            multiparm {
+                name    "ArrNum_FoliageTypes_VaibilityLayers"
+                label    "Number of Layers"
+
+                parm {
+                    name    "FoliageTypes_VaibilityLayers_LayerName#_#"
+                    label   "Layer Name"
+                    type    string
+                    default { "" }
+                }
+                parm {
+                    name    "FoliageTypes_VaibilityLayers_WeightRamp#_#"
+                    label   "Layer Weight Ramp"
+                    type    ramp_flt
+                    default { "2" }
+                    range   { 1! 10 }
+                }
+            }
+
+            parm {
+                name    "FoliageTypes_ViabilityPriority#"
+                label   "ViabilityPriority"
+                type    log
+                default { "1" }
+                range   { 0.01 10 }
+            }
+        }
+
+        group {
+            name    "folder6_#_1"
+            label   "Size"
+
+            multiparm {
+                name    "ArrNum_FoliageTypes_SizeVariants"
+                label    "Number Of Size"
+
+                parm {
+                    name    "FoliageTypes_SizeVariants_MeshAsset#_#"
+                    label   "Mesh Path"
+                    type    string
+                    default { "" }
+                }
+                parm {
+                    name    "FoliageTypes_SizeVariants_MeshAssetScale#_#"
+                    label   "MeshAssetScale"
+                    type    log
+                    default { "1" }
+                    range   { 0.01 10 }
+                }
+                parm {
+                    name    "size_ramp#_#"
+                    label   "Size Ramp"
+                    type    ramp_flt
+                    default { "2" }
+                    range   { 1! 10 }
+                }
+                parm {
+                    name    "FoliageTypes_SizeVariants_SizeRadius#_#"
+                    label   "Size Radius"
+                    type    log
+                    default { "1" }
+                    range   { 0.01 10 }
+                }
+            }
+
+        }
+
+        group {
+            name    "folder6_#_2"
+            label   "Age"
+
+            parm {
+                name    "FoliageTypes_AgeRamp#"
+                label   "AgeRamp"
+                type    ramp_flt
+                default { "2" }
+                range   { 1! 10 }
+            }
+        }
+
+        group {
+            name    "folder6_#_3"
+            label   "Density"
+
+            parm {
+                name    "FoliageTypes_Density#"
+                label   "Density"
+                type    log
+                default { "1" }
+                range   { 0.01 10 }
+            }
+        }
+
+        group {
+            name    "folder6_#_4"
+            label   "Preview"
+
+            parm {
+                name    "FoliageTypes_PreviewColor#"
+                label   "Preview Color"
+                type    color
+                size    3
+                default { "1" "1" "1" }
+                range   { 0 1 }
+            }
+        }
+
+    }
+
+}

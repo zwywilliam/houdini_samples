@@ -1,0 +1,15 @@
+Operator:     generate_terrain_entities
+Label:        Generate terrain entities
+Path:         oplib:/Sop/generate_terrain_entities?Sop/generate_terrain_entities
+Icon:         SOP_subnet
+Table:        Sop
+License:      
+Extra:        
+User:         
+Inputs:       0 to 3
+Outputs:      3
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Sat Sep 22 21:44:21 2018
+

@@ -1,0 +1,4273 @@
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY"
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPfallbacks"
+Content-Type: application/external-reference
+
+.OPfallbacks
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPdummydefs"
+Content-Type: application/external-reference
+
+.OPdummydefs
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="node_type"
+Content-Type: text/plain
+
+Sop
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.init"
+Content-Type: text/plain
+
+type = generate_terrain_entities
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -3.34789 -9.96979
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	heightfield_noise3 1 1 "input1"
+1 	mountain1 1 1 "input2"
+}
+inputs
+{
+0 	heightfield_noise3 0 1
+1 	mountain1 0 1
+}
+stat
+{
+  create 1535527433
+  modify 1537623914
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.inp"
+Content-Type: text/plain
+
+3
+0 -6.2488331501446153 16.164000553537281 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+1 -11.930353886818523 8.1659433049335419 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+2 9.264496169496784 16.68012438119289 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote3.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote3.postitdef"
+Content-Type: text/plain
+
+text "流程：
+导入heightmap产生heightfield
+导入手工绘制的plant mask以及其他工具产生的exclusion mask
+根据heightfield，产生所有abiotic层基础数据（AO/flow/slope）
+viability：使用预先产生的abiotic数据组合出最终的生存指数mask
+处理size
+根据密度值，进行scatter
+scatter进行品种竞争剔除
+
+
+
+输入：地形、点集
+输出：地形、点集
+
+"
+position -29.9839 -1.70503
+size 9.66227 5.40795
+flags = minimize off
+stat
+{
+  create 1536045510
+  modify 1536670075
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 1 0.969 0.522 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote4.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote4.postitdef"
+Content-Type: text/plain
+
+text 产生abiotic层信息
+position -7.48778 -1.99706
+size 4.77659 8.39026
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1536047251
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote2.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote2.postitdef"
+Content-Type: text/plain
+
+text "TODO：
+考虑如何在山崖上种植植被
+考虑如何剔除外面看不到的面
+如何通过模型产生vdb，并用于后续的使用"
+position -36.952 -3.2135
+size 6.63458 9.19404
+flags = minimize off
+stat
+{
+  create 1535546643
+  modify 1535549854
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 1 0.969 0.522 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote5.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote5.postitdef"
+Content-Type: text/plain
+
+text "测试用input
+"
+position 17.907 5.30691
+size 4.85559 3.4547
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1537428604
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote6.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote6.postitdef"
+Content-Type: text/plain
+
+text "根据输入的mask产生viability
+然后产生一批点
+为这批点计算基本属性（旋转缩放颜色）"
+position -6.30979 -13.4321
+size 4.77659 5.90264
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1537360234
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote7.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote7.postitdef"
+Content-Type: text/plain
+
+text 与之前的viability进行竞争，剔除
+position -6.30979 -20.0311
+size 4.77659 5.90264
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1536048026
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote8.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote8.postitdef"
+Content-Type: text/plain
+
+text "基于最终的viability，综合计算density/size/age，产出最终的结果
+mask的值可以直接控制heightfield scatter，所以只需要写入density mask即可"
+position -6.78933 -28.2629
+size 4.77659 5.90264
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1536068729
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote9.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote9.postitdef"
+Content-Type: text/plain
+
+text "foreach_begin设置为fetch feedback，将上次的结果作为输入继续使用
+
+foreach_count用于提供当前是第几个循环的idx
+
+foreach_end使用feedback each iteration，以便每次循环都访问到上一步的结果
+
+通过merge将前后两部的数据进行归并
+
+通过attribute wrangle更新run_idx来得到loop次数
+
+如果需要在字段中使用idx，可以使用类似：
+mask`detail(\"../foreach_count1\", \"ivalue\", 0)`"
+position -22.5535 -12.1462
+size 4.77659 5.90264
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1537616391
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote10.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote10.postitdef"
+Content-Type: text/plain
+
+text "通过curve选中区域并生成模型的方法，暂时未使用
+"
+position 17.1781 10.9269
+size 7.38388 5.8282
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1537428636
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote11.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote11.postitdef"
+Content-Type: text/plain
+
+text "处理模型上的植被输出
+TODO：借助地形来处理植被的种类"
+position -15.2009 -3.53144
+size 6.00214 10.2156
+textcolor UT_Color HSV 0 0 0.8 
+flags = minimize off
+stat
+{
+  create 1536046756
+  modify 1537616439
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.306 0.306 0.306 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise1.init"
+Content-Type: text/plain
+
+type = heightfield_noise
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 19.0708 5.82403
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield1 0 1 "input1"
+}
+inputs
+{
+0 	heightfield1 0 1
+}
+stat
+{
+  create 1535345789
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+layer	[ 0	locks=0 ]	(	height	)
+masklayer	[ 0	locks=0 ]	(	mask	)
+combine	[ 0	locks=0 ]	(	"add"	)
+blend	[ 0	locks=0 ]	(	0.5	)
+centernoise	[ 0	locks=0 ]	(	"on"	)
+amp	[ 0	locks=0 ]	(	500	)
+elementsize	[ 0	locks=0 ]	(	500	)
+elementscale	[ 0	locks=0 ]	(	1	1	1	)
+offset	[ 0	locks=0 ]	(	0	0	0	)
+noise	[ 0	locks=0 ]	(	0	)
+basis	[ 0	locks=0 ]	(	sparse	)
+fractal	[ 0	locks=0 ]	(	hmfT	)
+period	[ 0	locks=0 ]	(	2	2	2	)
+oct	[ 0	locks=0 ]	(	8	)
+lac	[ 0	locks=0 ]	(	1.841	)
+rough	[ 0	locks=0 ]	(	0.5	)
+flowrot	[ 0	locks=0 ]	(	0	)
+output	[ 0	locks=0 ]	(	0	)
+fold	[ 0	locks=0 ]	(	"off"	)
+complement	[ 0	locks=0 ]	(	"off"	)
+dogain	[ 0	locks=0 ]	(	"off"	)
+gain	[ 0	locks=0 ]	(	0.5	)
+dobias	[ 0	locks=0 ]	(	"off"	)
+bias	[ 0	locks=0 ]	(	0.5	)
+Clipping	[ 0	locks=0 ]	(	0	)
+clipmin	[ 0	locks=0 ]	(	0	)
+clipmax	[ 0	locks=0 ]	(	1	)
+distortion	[ 0	locks=0 ]	(	0	)
+latticewarp	[ 0	locks=0 ]	(	0	)
+dolwarp	[ 0	locks=0 ]	(	"off"	)
+accuml	[ 0	locks=0 ]	(	"on"	)
+disp	[ 0	locks=0 ]	(	0.14050000000000001	)
+dispfreq	[ 0	locks=0 ]	(	1	)
+folder1	[ 0	locks=0 ]	(	0	)
+dogwarp	[ 0	locks=0 ]	(	"off"	)
+accumg	[ 0	locks=0 ]	(	"off"	)
+gflow	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise2.init"
+Content-Type: text/plain
+
+type = heightfield_noise
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 21.4587 14.1444
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield2 0 1 "input1"
+}
+inputs
+{
+0 	heightfield2 0 1
+}
+stat
+{
+  create 1535637610
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+layer	[ 0	locks=0 ]	(	height	)
+masklayer	[ 0	locks=0 ]	(	mask	)
+combine	[ 0	locks=0 ]	(	"add"	)
+blend	[ 0	locks=0 ]	(	0.5	)
+centernoise	[ 0	locks=0 ]	(	"on"	)
+amp	[ 0	locks=0 ]	(	500	)
+elementsize	[ 0	locks=0 ]	(	500	)
+elementscale	[ 0	locks=0 ]	(	1	1	1	)
+offset	[ 0	locks=0 ]	(	0	0	0	)
+noise	[ 0	locks=0 ]	(	0	)
+basis	[ 0	locks=0 ]	(	sparse	)
+fractal	[ 0	locks=0 ]	(	hmfT	)
+period	[ 0	locks=0 ]	(	2	2	2	)
+oct	[ 0	locks=0 ]	(	8	)
+lac	[ 0	locks=0 ]	(	1.841	)
+rough	[ 0	locks=0 ]	(	0.5	)
+flowrot	[ 0	locks=0 ]	(	0	)
+output	[ 0	locks=0 ]	(	0	)
+fold	[ 0	locks=0 ]	(	"off"	)
+complement	[ 0	locks=0 ]	(	"off"	)
+dogain	[ 0	locks=0 ]	(	"off"	)
+gain	[ 0	locks=0 ]	(	0.5	)
+dobias	[ 0	locks=0 ]	(	"off"	)
+bias	[ 0	locks=0 ]	(	0.5	)
+Clipping	[ 0	locks=0 ]	(	0	)
+clipmin	[ 0	locks=0 ]	(	0	)
+clipmax	[ 0	locks=0 ]	(	1	)
+distortion	[ 0	locks=0 ]	(	0	)
+latticewarp	[ 0	locks=0 ]	(	0	)
+dolwarp	[ 0	locks=0 ]	(	"off"	)
+accuml	[ 0	locks=0 ]	(	"on"	)
+disp	[ 0	locks=0 ]	(	0.14050000000000001	)
+dispfreq	[ 0	locks=0 ]	(	1	)
+folder1	[ 0	locks=0 ]	(	0	)
+dogwarp	[ 0	locks=0 ]	(	"off"	)
+accumg	[ 0	locks=0 ]	(	"off"	)
+gflow	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_noise2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/convertheightfield2.init"
+Content-Type: text/plain
+
+type = convertheightfield
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/convertheightfield2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 20.7547 13.1444
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_noise2 1 1 "input1"
+}
+inputs
+{
+0 	heightfield_noise2 0 1
+}
+stat
+{
+  create 1535637634
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/convertheightfield2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+layer	[ 0	locks=0 ]	(	height	)
+conversion	[ 0	locks=0 ]	(	"poly"	)
+surftype	[ 0	locks=0 ]	(	"quads"	)
+lod	[ 0	locks=0 ]	(	1	)
+bakecd	[ 0	locks=0 ]	(	"off"	)
+folder0	[ 0	locks=0 ]	(	0	)
+doextrude	[ 0	locks=0 ]	(	"off"	)
+depth	[ 0	locks=0 ]	(	-1	)
+basenormal	[ 0	locks=0 ]	(	0	1	0	)
+flat	[ 0	locks=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/convertheightfield2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_slope.init"
+Content-Type: text/plain
+
+type = heightfield_maskbyfeature
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_slope.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -5.99262 0.916756
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_compute_ao1 1 1 "input1"
+}
+inputs
+{
+0 	heightfield_compute_ao1 0 1
+}
+stat
+{
+  create 1536046704
+  modify 1537447241
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_slope.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder3	[ 0	locks=0 ]	(	0	0	)
+smooth_radius	[ 0	locks=0 ]	(	1	)
+combine	[ 0	locks=0 ]	(	"replace"	)
+blend	[ 0	locks=0 ]	(	0.5	)
+invertmask	[ 0	locks=0 ]	(	"off"	)
+folder1	[ 0	locks=0 ]	(	0	)
+maskbyslope	[ 0	locks=0 ]	(	"on"	)
+min_slopeangle	[ 0	locks=0 ]	(	20	)
+max_slopeangle	[ 0	locks=0 ]	(	70	)
+sloperamp	[ 0	locks=0 ]	(	4	)
+folder2	[ 0	locks=0 ]	(	0	)
+maskbyheight	[ 0	locks=0 ]	(	"off"	)
+computerange	[ 0	locks=0 ]	(	0	)
+minheight	[ 0	locks=0 ]	(	0	)
+maxheight	[ 0	locks=0 ]	(	1	)
+heightramp	[ 0	locks=0 ]	(	4	)
+folder4	[ 0	locks=0 ]	(	0	)
+maskbycurvature	[ 0	locks=0 ]	(	"off"	)
+computercurvature	[ 0	locks=0 ]	(	0	)
+max_curvature	[ 0	locks=0 ]	(	10	)
+curvatureramp	[ 0	locks=0 ]	(	4	)
+folder0	[ 0	locks=0 ]	(	0	)
+maskbydir	[ 0	locks=0 ]	(	"off"	)
+goal_angle	[ 0	locks=0 ]	(	0	)
+angle_spread	[ 0	locks=0 ]	(	30	)
+dirramp	[ 0	locks=0 ]	(	4	)
+heightlayer	[ 0	locks=0 ]	(	height	)
+masklayer	[ 0	locks=0 ]	(	layer_slope	)
+sloperamp1pos	[ 0	locks=0 ]	(	0	)
+sloperamp1value	[ 0	locks=0 ]	(	0	)
+sloperamp1interp	[ 0	locks=0 ]	(	"linear"	)
+sloperamp2pos	[ 0	locks=0 ]	(	0.10000000149011612	)
+sloperamp2value	[ 0	locks=0 ]	(	1	)
+sloperamp2interp	[ 0	locks=0 ]	(	"linear"	)
+sloperamp3pos	[ 0	locks=0 ]	(	0.89999997615814209	)
+sloperamp3value	[ 0	locks=0 ]	(	1	)
+sloperamp3interp	[ 0	locks=0 ]	(	"linear"	)
+sloperamp4pos	[ 0	locks=0 ]	(	1	)
+sloperamp4value	[ 0	locks=0 ]	(	0	)
+sloperamp4interp	[ 0	locks=0 ]	(	"linear"	)
+heightramp1pos	[ 0	locks=0 ]	(	0	)
+heightramp1value	[ 0	locks=0 ]	(	0	)
+heightramp1interp	[ 0	locks=0 ]	(	"linear"	)
+heightramp2pos	[ 0	locks=0 ]	(	0.10000000149011612	)
+heightramp2value	[ 0	locks=0 ]	(	1	)
+heightramp2interp	[ 0	locks=0 ]	(	"linear"	)
+heightramp3pos	[ 0	locks=0 ]	(	0.89999997615814209	)
+heightramp3value	[ 0	locks=0 ]	(	1	)
+heightramp3interp	[ 0	locks=0 ]	(	"linear"	)
+heightramp4pos	[ 0	locks=0 ]	(	1	)
+heightramp4value	[ 0	locks=0 ]	(	0	)
+heightramp4interp	[ 0	locks=0 ]	(	"linear"	)
+curvatureramp1pos	[ 0	locks=0 ]	(	0	)
+curvatureramp1value	[ 0	locks=0 ]	(	1	)
+curvatureramp1interp	[ 0	locks=0 ]	(	"linear"	)
+curvatureramp2pos	[ 0	locks=0 ]	(	0.10000000149011612	)
+curvatureramp2value	[ 0	locks=0 ]	(	0	)
+curvatureramp2interp	[ 0	locks=0 ]	(	"linear"	)
+curvatureramp3pos	[ 0	locks=0 ]	(	0.89999997615814209	)
+curvatureramp3value	[ 0	locks=0 ]	(	0	)
+curvatureramp3interp	[ 0	locks=0 ]	(	"linear"	)
+curvatureramp4pos	[ 0	locks=0 ]	(	1	)
+curvatureramp4value	[ 0	locks=0 ]	(	1	)
+curvatureramp4interp	[ 0	locks=0 ]	(	"linear"	)
+dirramp1pos	[ 0	locks=0 ]	(	0	)
+dirramp1value	[ 0	locks=0 ]	(	0	)
+dirramp1interp	[ 0	locks=0 ]	(	"linear"	)
+dirramp2pos	[ 0	locks=0 ]	(	0.10000000149011612	)
+dirramp2value	[ 0	locks=0 ]	(	1	)
+dirramp2interp	[ 0	locks=0 ]	(	"linear"	)
+dirramp3pos	[ 0	locks=0 ]	(	0.89999997615814209	)
+dirramp3value	[ 0	locks=0 ]	(	1	)
+dirramp3interp	[ 0	locks=0 ]	(	"linear"	)
+dirramp4pos	[ 0	locks=0 ]	(	1	)
+dirramp4value	[ 0	locks=0 ]	(	0	)
+dirramp4interp	[ 0	locks=0 ]	(	"linear"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_slope.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_erode2.init"
+Content-Type: text/plain
+
+type = heightfield_erode
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_erode2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -5.99262 -0.154219
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_slope 1 1 "input1"
+}
+inputs
+{
+0 	heightfield_slope 0 1
+}
+stat
+{
+  create 1536046726
+  modify 1537445327
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_erode2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+precipitation_folder_1	[ 0	locks=0 ]	(	7	7	7	7	7	7	7	7	)
+maskerodelayer	[ 0	locks=0 ]	(	erodability	)
+erode_amount	[ 0	locks=0 ]	(	1	)
+erode_variability	[ 0	locks=0 ]	(	0.10000000000000001	)
+erode_maxdepth	[ 0	locks=0 ]	(	5	)
+folder0	[ 0	locks=0 ]	(	0	)
+contrib_hydro	[ 0	locks=0 ]	(	1	)
+dissolve_hydro	[ 0	locks=0 ]	(	0.5	)
+folder2	[ 0	locks=0 ]	(	0	)
+contrib_thermal	[ 0	locks=0 ]	(	1	)
+dissolve_thermal	[ 0	locks=0 ]	(	0	)
+thermalsize	[ 0	locks=0 ]	(	10	)
+maskpreciplayer	[ 0	locks=0 ]	(	precipitation	)
+rain_amount	[ 0	locks=0 ]	(	5	)
+rain_density	[ 0	locks=0 ]	(	0.050000000000000003	)
+rain_evaporation	[ 0	locks=0 ]	(	1	)
+flowfolder	[ 0	locks=0 ]	(	0	)
+rainflow_spreaditers	[ 0	locks=0 ]	(	200	)
+rainflow_spreadrate	[ 0	locks=0 ]	(	1	)
+rainflow_smoothiters	[ 0	locks=0 ]	(	20	)
+rainflow_smoothrate	[ 0	locks=0 ]	(	1	)
+entrainment	[ 0	locks=0 ]	(	0.5	)
+folder1	[ 0	locks=0 ]	(	0	)
+settle_iterations	[ 0	locks=0 ]	(	20	)
+settle_rate	[ 0	locks=0 ]	(	1	)
+settle_repose	[ 0	locks=0 ]	(	35	)
+bedrockoverridelayer	[ 0	locks=0 ]	(	height	)
+douplift	[ 0	locks=0 ]	(	"on"	)
+folder3	[ 0	locks=0 ]	(	0	)
+dostrata	[ 0	locks=0 ]	(	"off"	)
+strata_depth	[ 0	locks=0 ]	(	10	)
+strata_clamp	[ 0	locks=0 ]	(	"on"	)
+strata_ramp	[ 0	locks=0 ]	(	2	)
+debris_removefromheight	[ 0	locks=0 ]	(	"on"	)
+water_removefromheight	[ 0	locks=0 ]	(	"off"	)
+clearwater	[ 0	locks=0 ]	(	"off"	)
+cleardebris	[ 0	locks=0 ]	(	"off"	)
+debris_addtoheight	[ 0	locks=0 ]	(	"on"	)
+water_addtoheight	[ 0	locks=0 ]	(	"off"	)
+heightlayer	[ 0	locks=0 ]	(	height	)
+waterlayer	[ 0	locks=0 ]	(	water	)
+materiallayer	[ 0	locks=0 ]	(	debris	)
+bedrocklayer	[ 0	locks=0 ]	(	bedrock	)
+flowlayer	[ 0	locks=0 ]	(	flow	)
+flowdirlayer	[ 0	locks=0 ]	(	flowdir	)
+resimulate	[ 0	locks=0 ]	(	0	)
+startframe	[ 0	locks=0 ]	(	1	)
+substep	[ 0	locks=0 ]	(	1	)
+cacheenabled	[ 0	locks=0 ]	(	"on"	)
+cachetodisk	[ 0	locks=0 ]	(	"off"	)
+cachemaxsize	[ 0	locks=0 ]	(	5000	)
+dovisualize	[ 0	locks=0 ]	(	"on"	)
+vis_computerange	[ 0	locks=0 ]	(	0	)
+vis_minelevation	[ 0	locks=0 ]	(	0	)
+vis_maxelevation	[ 0	locks=0 ]	(	250	)
+vis_heightramp	[ 0	locks=0 ]	(	5	)
+vis_layer3	[ 0	locks=0 ]	(	""	)
+vis_color3	[ 0	locks=0 ]	(	1	0	0	1	)
+vis_layer2	[ 0	locks=0 ]	(	water	)
+vis_color2	[ 0	locks=0 ]	(	0	0.125	0.66500000000000004	1	)
+vis_layer1	[ 0	locks=0 ]	(	debris	)
+vis_color1	[ 0	locks=0 ]	(	0.29999999999999999	0.17999999999999999	0.070000000000000007	1	)
+strata_ramp1pos	[ 0	locks=0 ]	(	0	)
+strata_ramp1value	[ 0	locks=0 ]	(	1	)
+strata_ramp1interp	[ 0	locks=0 ]	(	"linear"	)
+strata_ramp2pos	[ 0	locks=0 ]	(	1	)
+strata_ramp2value	[ 0	locks=0 ]	(	1	)
+strata_ramp2interp	[ 0	locks=0 ]	(	"linear"	)
+vis_heightramp1pos	[ 0	locks=0 ]	(	0	)
+vis_heightramp1c	[ 0	locks=0 ]	(	0.5	0.25	0	)
+vis_heightramp1interp	[ 0	locks=0 ]	(	"monotonecubic"	)
+vis_heightramp2pos	[ 0	locks=0 ]	(	0.24521072208881378	)
+vis_heightramp2c	[ 0	locks=0 ]	(	0	0.5	0	)
+vis_heightramp2interp	[ 0	locks=0 ]	(	"monotonecubic"	)
+vis_heightramp3pos	[ 0	locks=0 ]	(	0.54278415441513062	)
+vis_heightramp3c	[ 0	locks=0 ]	(	0.17387998104095459	0.62099999189376831	0.17387998104095459	)
+vis_heightramp3interp	[ 0	locks=0 ]	(	"monotonecubic"	)
+vis_heightramp4pos	[ 0	locks=0 ]	(	0.81609195470809937	)
+vis_heightramp4c	[ 0	locks=0 ]	(	0.20000000298023224	0.20000000298023224	0.20000000298023224	)
+vis_heightramp4interp	[ 0	locks=0 ]	(	"monotonecubic"	)
+vis_heightramp5pos	[ 0	locks=0 ]	(	1	)
+vis_heightramp5c	[ 0	locks=0 ]	(	1	1	1	)
+vis_heightramp5interp	[ 0	locks=0 ]	(	"monotonecubic"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_erode2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	},
+	"___toolcount___":{
+		"type":"string",
+		"value":"1"
+	},
+	"___toolid___":{
+		"type":"string",
+		"value":"terrain_valley"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "init point data"
+position -4.21867 -10.7774
+connectornextid 4
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+1 	heightfield_scatter1 1 1 "input1"
+2 	heightfield_wrangle1 1 1 "input2"
+3 	foreach_count1 0 1 "input3"
+}
+inputs
+{
+0 	heightfield_scatter1 0 1
+1 	heightfield_wrangle1 0 1
+2 	foreach_count1 0 1
+}
+stat
+{
+  create 1536136889
+  modify 1537506015
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	0	0	)
+group	[ 0	locks=0 ]	(	""	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+class	[ 0	locks=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
+snippet	[ 0	locks=0 ]	(	"#include \"vegetation_util.vfl\"
+
+foliage_point_info info;
+
+int idx = detail(2, \"ivalue\", 0);
+
+info->init_from_heightfield(@ptnum, @P, idx);
+
+f@viability = info.viability;
+f@viability_radius = info.viability_radius;
+i@pt_removed = 0;
+s@unreal_path = info.unreal_path;
+f@age_value = info.age;
+@Cd = info.preview_color;
+
+float r = rand(@P.x);
+@N = {0,0,1};
+@N.x = r;
+@pscale = r * 0.9f + 0.9f;
+
+
+
+
+"	)
+exportlist	[ 0	locks=0 ]	(	*	)
+vex_strict	[ 0	locks=0 ]	(	"off"	)
+autobind	[ 0	locks=0 ]	(	"on"	)
+bindings	[ 0	locks=0 ]	(	0	)
+groupautobind	[ 0	locks=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0 ]	(	id	)
+vex_inplace	[ 0	locks=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_scatter1.init"
+Content-Type: text/plain
+
+type = heightfield_scatter
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_scatter1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -4.67856 -9.35209
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_wrangle1 1 1 "input1"
+}
+inputs
+{
+0 	heightfield_wrangle1 0 1
+}
+stat
+{
+  create 1536153203
+  modify 1537616289
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_scatter1.chn"
+Content-Type: text/plain
+
+{
+    channel densityscale {
+      lefttype = extend
+      righttype = extend
+      default = 0.01
+      flags = 0
+      segment { length = 0 value = 0.01 0.01 expr = ch(\"../FoliageTypes_Density1\")/100000 }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_scatter1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+layer	[ 0	locks=0 ]	(	mask	)
+pointcountmethod	[ 0	locks=0 ]	(	"density"	)
+npts	[ 0	locks=0 ]	(	1000	)
+densityscale	[ 8	locks=0 ]	(	[ densityscale	0.01 ] 	)
+folder0	[ 0	locks=0 ]	(	0	)
+relaxpoints	[ 0	locks=0 ]	(	"off"	)
+relaxiterations	[ 0	locks=0 ]	(	10	)
+scaleradiiby	[ 0	locks=0 ]	(	1	)
+usemaxradius	[ 0	locks=0 ]	(	"on"	)
+maxradius	[ 0	locks=0 ]	(	10	)
+seed	[ 0	locks=0 ]	(	0	)
+useemergencylimit	[ 0	locks=0 ]	(	"off"	)
+emergencylimit	[ 0	locks=0 ]	(	1000000	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_scatter1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_wrangle1.init"
+Content-Type: text/plain
+
+type = volumewrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_wrangle1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -4.85194 -7.26655
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_copyflow1 1 1 "input1"
+2 	foreach_count1 0 1 "input2"
+}
+inputs
+{
+0 	heightfield_copyflow1 0 1
+1 	foreach_count1 0 1
+}
+stat
+{
+  create 1536153436
+  modify 1537447272
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_wrangle1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	0	0	)
+group	[ 0	locks=0 ]	(	""	)
+bindeach	[ 0	locks=0 ]	(	"off"	)
+snippet	[ 0	locks=0 ]	(	"#include \"vegetation_util.vfl\"
+
+
+//float gs_vegetation_heightfield_mask_merge(int foliage_idx; vector pos; heightfield_info hf_info)
+
+heightfield_info hf_info;
+int idx = detail(1, \"ivalue\", 0);
+@mask = gs_vegetation_heightfield_mask_merge(idx, @P, hf_info); 
+
+"	)
+exportlist	[ 0	locks=0 ]	(	*	)
+vex_strict	[ 0	locks=0 ]	(	"off"	)
+autobind	[ 0	locks=0 ]	(	"on"	)
+bindings	[ 0	locks=0 ]	(	0	)
+vex_geometrygenerator	[ 0	locks=0 ]	(	"off"	)
+vdb_signedflood	[ 0	locks=0 ]	(	"on"	)
+vex_cwdpath	[ 0	locks=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0 ]	(	*	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_wrangle1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.82772 -29.4095
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	foreach_end1 1 1 "input1"
+}
+inputs
+{
+0 	foreach_end1 0 1
+}
+stat
+{
+  create 1536585179
+  modify 1537447522
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	0	0	)
+group	[ 0	locks=0 ]	(	""	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+class	[ 0	locks=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
+snippet	[ 0	locks=0 ]	(	"#include \"test_include.vfl\"
+s@unreal_instance = get_testname();"	)
+exportlist	[ 0	locks=0 ]	(	*	)
+vex_strict	[ 0	locks=0 ]	(	"off"	)
+autobind	[ 0	locks=0 ]	(	"on"	)
+bindings	[ 0	locks=0 ]	(	0	)
+groupautobind	[ 0	locks=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0 ]	(	id	)
+vex_inplace	[ 0	locks=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "viability selection，通过物种竞争移除重叠的植物"
+position -5.07861 -15.9569
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	merge1 1 1 "input1"
+}
+inputs
+{
+0 	merge1 0 1
+}
+stat
+{
+  create 1537185807
+  modify 1537615486
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	0	0	)
+group	[ 0	locks=0 ]	(	""	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+class	[ 0	locks=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
+snippet	[ 0	locks=0 ]	(	"#include \"vegetation_util.vfl\"
+
+gs_vegetation_viability_selection(@ptnum, @P, @viability_radius, @viability);
+"	)
+exportlist	[ 0	locks=0 ]	(	*	)
+vex_strict	[ 0	locks=0 ]	(	"off"	)
+autobind	[ 0	locks=0 ]	(	"on"	)
+bindings	[ 0	locks=0 ]	(	0	)
+groupautobind	[ 0	locks=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0 ]	(	id	)
+vex_inplace	[ 0	locks=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment 根据上一个节点的结果移除点阵
+position -4.61061 -17.714
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	attribwrangle3 1 1 "input1"
+}
+inputs
+{
+0 	attribwrangle3 0 1
+}
+stat
+{
+  create 1537185807
+  modify 1537615514
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	0	0	)
+group	[ 0	locks=0 ]	(	""	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+class	[ 0	locks=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
+snippet	[ 0	locks=0 ]	(	"#include \"vegetation_util.vfl\"
+
+gs_foliage_remove_finalize(@ptnum, @removed);"	)
+exportlist	[ 0	locks=0 ]	(	*	)
+vex_strict	[ 0	locks=0 ]	(	"off"	)
+autobind	[ 0	locks=0 ]	(	"on"	)
+bindings	[ 0	locks=0 ]	(	0	)
+groupautobind	[ 0	locks=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0 ]	(	id	)
+vex_inplace	[ 0	locks=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_maskbyobject1.init"
+Content-Type: text/plain
+
+type = heightfield_maskbyobject
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_maskbyobject1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment 通过这个节点将模型阻挡的区域移除
+position -5.81395 3.56912
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	init_layers 1 1 "input1"
+2 	(1) "" 1 "input2"
+}
+inputs
+{
+0 	init_layers 0 1
+1 	(1) 0 1
+}
+stat
+{
+  create 1537615293
+  modify 1537615796
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_maskbyobject1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	1	1	)
+combine	[ 0	locks=0 ]	(	"replace"	)
+blend	[ 0	locks=0 ]	(	0.5	)
+method	[ 0	locks=0 ]	(	"ray"	)
+invertmask	[ 0	locks=0 ]	(	"off"	)
+maxdist	[ 0	locks=0 ]	(	1000	)
+value	[ 0	locks=0 ]	(	1	)
+blurmethod	[ 0	locks=0 ]	(	"blur"	)
+blurradius	[ 0	locks=0 ]	(	0	)
+masklayer	[ 0	locks=0 ]	(	layer_obj	)
+heightlayer	[ 0	locks=0 ]	(	height	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_maskbyobject1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle5.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle5.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment density属性
+position -12.1894 0.562279
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	blast2 1 1 "input1"
+}
+inputs
+{
+0 	blast2 0 1
+}
+stat
+{
+  create 1537616209
+  modify 1537616501
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle5.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	0	0	)
+group	[ 0	locks=0 ]	(	""	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+class	[ 0	locks=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
+snippet	[ 0	locks=0 ]	(	"@density = ch(\"../FoliageTypes_Density1\")/100000;
+"	)
+exportlist	[ 0	locks=0 ]	(	*	)
+vex_strict	[ 0	locks=0 ]	(	"off"	)
+autobind	[ 0	locks=0 ]	(	"on"	)
+bindings	[ 0	locks=0 ]	(	0	)
+groupautobind	[ 0	locks=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0 ]	(	id	)
+vex_inplace	[ 0	locks=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle5.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.init"
+Content-Type: text/plain
+
+type = box
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -6.07089 -28.5629
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create 1535344780
+  modify 1537428660
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+type	[ 0	locks=0 ]	(	"poly"	)
+surftype	[ 0	locks=0 ]	(	"quads"	)
+consolidatepts	[ 0	locks=0 ]	(	"on"	)
+size	[ 0	locks=0 ]	(	1	10	1	)
+t	[ 0	locks=0 ]	(	0	5	0	)
+scale	[ 0	locks=0 ]	(	1	)
+divrate	[ 0	locks=0 ]	(	4	4	4	)
+orderrate	[ 0	locks=0 ]	(	4	4	4	)
+dodivs	[ 0	locks=0 ]	(	"off"	)
+divs	[ 0	locks=0 ]	(	3	3	3	)
+rebar	[ 0	locks=0 ]	(	"off"	)
+orientedbbox	[ 0	locks=0 ]	(	"off"	)
+vertexnormals	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/copytopoints1.init"
+Content-Type: text/plain
+
+type = copytopoints
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/copytopoints1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -3.21861 -33.27
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+2 "output1"
+}
+inputsNamed3
+{
+0 	box1 0 1 "input1"
+1 	attribwrangle1 1 1 "input2"
+}
+inputs
+{
+0 	box1 0 1
+1 	attribwrangle1 0 1
+}
+stat
+{
+  create 1535344789
+  modify 1537608475
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 1 0.65 0.1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/copytopoints1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+sourcegroup	[ 0	locks=0 ]	(	""	)
+targetgroup	[ 0	locks=0 ]	(	""	)
+showguide	[ 0	locks=0 ]	(	"on"	)
+pack	[ 0	locks=0 ]	(	"on"	)
+pivot	[ 0	locks=0 ]	(	"centroid"	)
+viewportlod	[ 0	locks=0 ]	(	"full"	)
+transform	[ 0	locks=0 ]	(	"on"	)
+doattr	[ 0	locks=0 ]	(	"on"	)
+labelparm	[ 0	locks=0 ]	(	Set	Mult	Add	Sub	)
+setpt	[ 0	locks=0 ]	(	*,^v,^Alpha	)
+mulpt	[ 0	locks=0 ]	(	Alpha	)
+addpt	[ 0	locks=0 ]	(	v	)
+subpt	[ 0	locks=0 ]	(	""	)
+setprim	[ 0	locks=0 ]	(	""	)
+mulprim	[ 0	locks=0 ]	(	""	)
+addprim	[ 0	locks=0 ]	(	""	)
+subprim	[ 0	locks=0 ]	(	""	)
+setvtx	[ 0	locks=0 ]	(	""	)
+mulvtx	[ 0	locks=0 ]	(	""	)
+addvtx	[ 0	locks=0 ]	(	""	)
+subvtx	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/copytopoints1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield1.init"
+Content-Type: text/plain
+
+type = heightfield
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 18.7991 7.90633
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create 1535345781
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+orient	[ 0	locks=0 ]	(	"zx"	)
+initialheight	[ 0	locks=0 ]	(	0	)
+initialmask	[ 0	locks=0 ]	(	0	)
+divisionmode	[ 0	locks=0 ]	(	"size"	)
+gridspacing	[ 0	locks=0 ]	(	2	)
+gridsamples	[ 0	locks=0 ]	(	512	)
+scale	[ 0	locks=0 ]	(	1	)
+size	[ 0	locks=0 ]	(	1000	1000	)
+t	[ 0	locks=0 ]	(	0	0	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/curve1.init"
+Content-Type: text/plain
+
+type = curve
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/curve1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 18.5332 15.1984
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create 1535637300
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/curve1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+type	[ 0	locks=0 ]	(	"poly"	)
+method	[ 0	locks=0 ]	(	"cv"	)
+coords	[ 0	locks=0 ]	(	"-3,0,3 -3,0,-3 3,0,-3 3,0,3"	)
+stdswitcher	[ 0	locks=0 ]	(	0	0	)
+close	[ 0	locks=0 ]	(	"on"	)
+reverse	[ 0	locks=0 ]	(	"off"	)
+normalize	[ 0	locks=0 ]	(	"off"	)
+order	[ 0	locks=0 ]	(	4	)
+param	[ 0	locks=0 ]	(	"uniform"	)
+tolerance	[ 0	locks=0 ]	(	0.01	)
+smooth	[ 0	locks=0 ]	(	0	)
+csharp	[ 0	locks=0 ]	(	"off"	)
+keepgeo	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/curve1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/subdivide1.init"
+Content-Type: text/plain
+
+type = subdivide
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/subdivide1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 18.6352 14.1444
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	curve1 0 1 "input1"
+}
+inputs
+{
+0 	curve1 0 1
+}
+stat
+{
+  create 1535637344
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/subdivide1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+subdivide	[ 0	locks=0 ]	(	""	)
+creases	[ 0	locks=0 ]	(	""	)
+algorithm	[ 0	locks=0 ]	(	"osdcc"	)
+iterations	[ 0	locks=0 ]	(	1	)
+overridecrease	[ 0	locks=0 ]	(	"off"	)
+creaseweight	[ 0	locks=0 ]	(	0	)
+outputcrease	[ 0	locks=0 ]	(	"off"	)
+outcreasegroup	[ 0	locks=0 ]	(	creases	)
+closeholes	[ 0	locks=0 ]	(	"pull"	)
+surroundpoly	[ 0	locks=0 ]	(	"edges"	)
+bias	[ 0	locks=0 ]	(	1	)
+updatenmls	[ 0	locks=0 ]	(	"on"	)
+smoothvertex	[ 0	locks=0 ]	(	"on"	)
+consisttopology	[ 0	locks=0 ]	(	"off"	)
+linearcreases	[ 0	locks=0 ]	(	"off"	)
+buildpolysoups	[ 0	locks=0 ]	(	"off"	)
+indepcurves	[ 0	locks=0 ]	(	"off"	)
+removeholes	[ 0	locks=0 ]	(	"on"	)
+vtxboundary	[ 0	locks=0 ]	(	"corner"	)
+fvarlinear	[ 0	locks=0 ]	(	"corner1"	)
+creasemethod	[ 0	locks=0 ]	(	"uniform"	)
+trianglesubd	[ 0	locks=0 ]	(	"catclark"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/subdivide1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/polyextrude1.init"
+Content-Type: text/plain
+
+type = polyextrude::2.0
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/polyextrude1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 18.5332 13.0004
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	subdivide1 1 1 "input1"
+}
+inputs
+{
+0 	subdivide1 0 1
+}
+stat
+{
+  create 1535637449
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/polyextrude1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0 ]	(	""	)
+splittype	[ 0	locks=0 ]	(	"components"	)
+usesplitgroup	[ 0	locks=0 ]	(	"off"	)
+splitgroup	[ 0	locks=0 ]	(	""	)
+extrusionmode	[ 0	locks=0 ]	(	"primnormal"	)
+ptnormalsrc	[ 0	locks=0 ]	(	"precompute"	)
+ptnormalattrib	[ 0	locks=0 ]	(	N	)
+dist	[ 0	locks=0 ]	(	10	)
+inset	[ 0	locks=0 ]	(	0	)
+twist	[ 0	locks=0 ]	(	0	)
+divs	[ 0	locks=0 ]	(	1	)
+spinetype	[ 0	locks=0 ]	(	"straight"	)
+stdswitcher	[ 0	locks=0 ]	(	0	0	0	)
+xformsection	[ 0	locks=0 ]	(	0	)
+xformfront	[ 0	locks=0 ]	(	"off"	)
+xformspace	[ 0	locks=0 ]	(	"local"	)
+rst	[ 0	locks=0 ]	(	"srt"	)
+xyz	[ 0	locks=0 ]	(	"xyz"	)
+translate	[ 0	locks=0 ]	(	0	0	0	)
+rotate	[ 0	locks=0 ]	(	0	0	0	)
+scale	[ 0	locks=0 ]	(	1	1	1	)
+shear	[ 0	locks=0 ]	(	0	0	0	)
+pivotxformsection	[ 0	locks=0 ]	(	0	)
+pivot	[ 0	locks=0 ]	(	0	0	0	)
+pivotrotate	[ 0	locks=0 ]	(	0	0	0	)
+prexformsection	[ 0	locks=0 ]	(	0	)
+prexform_rst	[ 0	locks=0 ]	(	"srt"	)
+prexform_xyz	[ 0	locks=0 ]	(	"xyz"	)
+prexform_translate	[ 0	locks=0 ]	(	0	0	0	)
+prexform_rotate	[ 0	locks=0 ]	(	0	0	0	)
+prexform_scale	[ 0	locks=0 ]	(	1	1	1	)
+prexform_shear	[ 0	locks=0 ]	(	0	0	0	)
+outputsection	[ 0	locks=0 ]	(	0	)
+outputfront	[ 0	locks=0 ]	(	"on"	)
+outputfrontgrp	[ 0	locks=0 ]	(	"off"	)
+frontgrp	[ 0	locks=0 ]	(	extrudeFront	)
+outputback	[ 0	locks=0 ]	(	"off"	)
+outputbackgrp	[ 0	locks=0 ]	(	"off"	)
+backgrp	[ 0	locks=0 ]	(	extrudeBack	)
+outputside	[ 0	locks=0 ]	(	"on"	)
+outputsidegrp	[ 0	locks=0 ]	(	"off"	)
+sidegrp	[ 0	locks=0 ]	(	extrudeSide	)
+outputfrontseamgrp	[ 0	locks=0 ]	(	"off"	)
+frontseamgrp	[ 0	locks=0 ]	(	extrudeFrontSeam	)
+outputbackseamgrp	[ 0	locks=0 ]	(	"off"	)
+backseamgrp	[ 0	locks=0 ]	(	extrudeBackSeam	)
+preservegroups	[ 0	locks=0 ]	(	"on"	)
+insettingsection	[ 0	locks=0 ]	(	0	)
+limitinset	[ 0	locks=0 ]	(	"on"	)
+commonlimit	[ 0	locks=0 ]	(	"on"	)
+normalsection	[ 0	locks=0 ]	(	0	)
+addvertexnomrals	[ 0	locks=0 ]	(	"off"	)
+cuspangle	[ 0	locks=0 ]	(	60	)
+cuspfront	[ 0	locks=0 ]	(	"on"	)
+cuspback	[ 0	locks=0 ]	(	"on"	)
+uvssection	[ 0	locks=0 ]	(	0	)
+genuvs	[ 0	locks=0 ]	(	"on"	)
+uvstyle	[ 0	locks=0 ]	(	"proprtional"	)
+uvscaling	[ 0	locks=0 ]	(	"matchuv"	)
+shapecontrolsection	[ 0	locks=0 ]	(	0	)
+frontmagnitude	[ 0	locks=0 ]	(	1	)
+backmagnitude	[ 0	locks=0 ]	(	1	)
+frontstiffness	[ 0	locks=0 ]	(	0	)
+backstiffness	[ 0	locks=0 ]	(	0	)
+interpolation	[ 0	locks=0 ]	(	"rotatingframe"	)
+spacing	[ 0	locks=0 ]	(	"arclengthuniform"	)
+externalspinesection	[ 0	locks=0 ]	(	0	)
+reversespinedirection	[ 0	locks=0 ]	(	"off"	)
+axialrotation	[ 0	locks=0 ]	(	0	)
+frontblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+backblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+thicknesssection	[ 0	locks=0 ]	(	0	)
+thicknessscale	[ 0	locks=0 ]	(	1	)
+usethicknessattrib	[ 0	locks=0 ]	(	"on"	)
+thicknessattrib	[ 0	locks=0 ]	(	thickness	)
+usethicknessramp	[ 0	locks=0 ]	(	"on"	)
+thicknessramp	[ 0	locks=0 ]	(	2	)
+twistsection	[ 0	locks=0 ]	(	0	)
+usetwistattrib	[ 0	locks=0 ]	(	"on"	)
+twistattrib	[ 0	locks=0 ]	(	twist	)
+usetwistramp	[ 0	locks=0 ]	(	"on"	)
+twistramp	[ 0	locks=0 ]	(	2	)
+twistscale	[ 0	locks=0 ]	(	180	)
+localattribs	[ 0	locks=0 ]	(	0	)
+uselocalzscaleattrib	[ 0	locks=0 ]	(	"off"	)
+localzscaleattrib	[ 0	locks=0 ]	(	zscale	)
+uselocalinsetscaleattrib	[ 0	locks=0 ]	(	"off"	)
+localinsetscaleattrib	[ 0	locks=0 ]	(	insetscale	)
+uselocaltwistattrib	[ 0	locks=0 ]	(	"off"	)
+localtwistscaleattrib	[ 0	locks=0 ]	(	twistscale	)
+uselocaldivsattrib	[ 0	locks=0 ]	(	"off"	)
+locadivscaleattrib	[ 0	locks=0 ]	(	divsscale	)
+localframeattribs	[ 0	locks=0 ]	(	0	)
+uselocalxattrib	[ 0	locks=0 ]	(	"off"	)
+localxattrib	[ 0	locks=0 ]	(	localx	)
+uselocalzattirb	[ 0	locks=0 ]	(	"off"	)
+localzattirb	[ 0	locks=0 ]	(	localz	)
+uselocalctrattrib	[ 0	locks=0 ]	(	"off"	)
+localctrattrib	[ 0	locks=0 ]	(	localctr	)
+thicknessramp1pos	[ 0	locks=0 ]	(	0	)
+thicknessramp1value	[ 0	locks=0 ]	(	1	)
+thicknessramp1interp	[ 0	locks=0 ]	(	"catmull-rom"	)
+thicknessramp2pos	[ 0	locks=0 ]	(	1	)
+thicknessramp2value	[ 0	locks=0 ]	(	1	)
+thicknessramp2interp	[ 0	locks=0 ]	(	"catmull-rom"	)
+twistramp1pos	[ 0	locks=0 ]	(	0	)
+twistramp1value	[ 0	locks=0 ]	(	0.5	)
+twistramp1interp	[ 0	locks=0 ]	(	"catmull-rom"	)
+twistramp2pos	[ 0	locks=0 ]	(	1	)
+twistramp2value	[ 0	locks=0 ]	(	0.5	)
+twistramp2interp	[ 0	locks=0 ]	(	"catmull-rom"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/polyextrude1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/boolean2.init"
+Content-Type: text/plain
+
+type = boolean::2.0
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/boolean2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 18.9837 11.9603
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	polyextrude1 1 1 "input1"
+1 	convertheightfield2 1 1 "input2"
+}
+inputs
+{
+0 	polyextrude1 0 1
+1 	convertheightfield2 0 1
+}
+stat
+{
+  create 1535637600
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/boolean2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+inputa	[ 0	locks=0 ]	(	0	)
+agroup	[ 0	locks=0 ]	(	""	)
+asurface	[ 0	locks=0 ]	(	"solid"	)
+resolvea	[ 0	locks=0 ]	(	"on"	)
+inputb	[ 0	locks=0 ]	(	0	)
+bgroup	[ 0	locks=0 ]	(	""	)
+bsurface	[ 0	locks=0 ]	(	"solid"	)
+resolveb	[ 0	locks=0 ]	(	"on"	)
+output	[ 0	locks=0 ]	(	0	)
+booleanop	[ 0	locks=0 ]	(	"intersect"	)
+subtractchoices	[ 0	locks=0 ]	(	"bminusa"	)
+shatterchoices	[ 0	locks=0 ]	(	"apieces"	)
+opencurvesonly	[ 0	locks=0 ]	(	"on"	)
+generateaaseams	[ 0	locks=0 ]	(	"on"	)
+generatebbseams	[ 0	locks=0 ]	(	"on"	)
+generateabseams	[ 0	locks=0 ]	(	"on"	)
+adepth	[ 0	locks=0 ]	(	1	1000	)
+bdepth	[ 0	locks=0 ]	(	1	1000	)
+windingop	[ 0	locks=0 ]	(	"arange"	)
+mergenbrs	[ 0	locks=0 ]	(	"off"	)
+detriangulate	[ 0	locks=0 ]	(	"all"	)
+removeinlinepoints	[ 0	locks=0 ]	(	"on"	)
+uniqueseams	[ 0	locks=0 ]	(	"off"	)
+useaxapolys	[ 0	locks=0 ]	(	"off"	)
+axapolys	[ 0	locks=0 ]	(	axapolys	)
+useaxbpolys	[ 0	locks=0 ]	(	"off"	)
+axbpolys	[ 0	locks=0 ]	(	axbpolys	)
+useaxalist	[ 0	locks=0 ]	(	"off"	)
+axalist	[ 0	locks=0 ]	(	axalist	)
+useaxblist	[ 0	locks=0 ]	(	"off"	)
+axblist	[ 0	locks=0 ]	(	axblist	)
+collapsetinyedges	[ 0	locks=0 ]	(	"on"	)
+lengththreshold	[ 0	locks=0 ]	(	1.0000000000000001e-05	)
+outputprimgroups	[ 0	locks=0 ]	(	0	)
+useapolys	[ 0	locks=0 ]	(	"off"	)
+apolys	[ 0	locks=0 ]	(	apolys	)
+useainsideb	[ 0	locks=0 ]	(	"off"	)
+ainsideb	[ 0	locks=0 ]	(	ainsideb	)
+useaoutsideb	[ 0	locks=0 ]	(	"off"	)
+aoutsideb	[ 0	locks=0 ]	(	aoutsideb	)
+usebpolys	[ 0	locks=0 ]	(	"off"	)
+bpolys	[ 0	locks=0 ]	(	bpolys	)
+usebinsidea	[ 0	locks=0 ]	(	"off"	)
+binsidea	[ 0	locks=0 ]	(	binsidea	)
+useboutsidea	[ 0	locks=0 ]	(	"off"	)
+boutsidea	[ 0	locks=0 ]	(	boutsidea	)
+useaboverlap	[ 0	locks=0 ]	(	"off"	)
+aboverlap	[ 0	locks=0 ]	(	aboverlap	)
+useaonlypieces	[ 0	locks=0 ]	(	"off"	)
+aonlypieces	[ 0	locks=0 ]	(	apieces	)
+usebonlypieces	[ 0	locks=0 ]	(	"off"	)
+bonlypieces	[ 0	locks=0 ]	(	bpieces	)
+useabpieces	[ 0	locks=0 ]	(	"off"	)
+abpieces	[ 0	locks=0 ]	(	abpieces	)
+outputedgegroups	[ 0	locks=0 ]	(	0	)
+useaaseamedges	[ 0	locks=0 ]	(	"off"	)
+aaseamedges	[ 0	locks=0 ]	(	aseams	)
+usebbseamedges	[ 0	locks=0 ]	(	"off"	)
+bbseamedges	[ 0	locks=0 ]	(	bseams	)
+useabseamedges	[ 0	locks=0 ]	(	"off"	)
+abseamedges	[ 0	locks=0 ]	(	abseams	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/boolean2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield2.init"
+Content-Type: text/plain
+
+type = heightfield
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 21.4587 15.3355
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create 1535637615
+  modify 1537608453
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+orient	[ 0	locks=0 ]	(	"zx"	)
+initialheight	[ 0	locks=0 ]	(	0	)
+initialmask	[ 0	locks=0 ]	(	0	)
+divisionmode	[ 0	locks=0 ]	(	"size"	)
+gridspacing	[ 0	locks=0 ]	(	2	)
+gridsamples	[ 0	locks=0 ]	(	512	)
+scale	[ 0	locks=0 ]	(	1	)
+size	[ 0	locks=0 ]	(	1000	1000	)
+t	[ 0	locks=0 ]	(	0	0	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/init_layers.init"
+Content-Type: text/plain
+
+type = heightfield_copylayer
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/init_layers.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -5.59948 4.9297
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	python1 0 1 "input1"
+}
+inputs
+{
+0 	python1 0 1
+}
+stat
+{
+  create 1516403194
+  modify 1537615761
+  author cs@RWC-WKS-001
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/init_layers.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+numcopy	[ 0	locks=0 ]	(	4	)
+srcname1	[ 0	locks=0	autoscope=0 ]	(	mask	)
+dstname1	[ 0	locks=0	autoscope=0 ]	(	layer_ao	)
+copysrc1	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+replacedst1	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+srcname2	[ 0	locks=0 ]	(	mask	)
+dstname2	[ 0	locks=0 ]	(	layer_temp	)
+copysrc2	[ 0	locks=0 ]	(	"off"	)
+replacedst2	[ 0	locks=0 ]	(	"on"	)
+srcname3	[ 0	locks=0 ]	(	mask	)
+dstname3	[ 0	locks=0 ]	(	layer_slope	)
+copysrc3	[ 0	locks=0 ]	(	"off"	)
+replacedst3	[ 0	locks=0 ]	(	"on"	)
+srcname4	[ 0	locks=0 ]	(	mask	)
+dstname4	[ 0	locks=0 ]	(	layer_obj	)
+copysrc4	[ 0	locks=0 ]	(	"off"	)
+replacedst4	[ 0	locks=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/init_layers.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.init"
+Content-Type: text/plain
+
+type = subnet
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -5.99262 1.83138
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_maskbyobject1 1 1 "input1"
+}
+inputs
+{
+0 	heightfield_maskbyobject1 0 1
+}
+stat
+{
+  create 1518041003
+  modify 1537615552
+  author cs@RWC-WKS-001
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.spareparmdef"
+Content-Type: text/plain
+
+    parm {
+        name    "label1"
+        baseparm
+        label   "Input #1 Label"
+        export  all
+    }
+    parm {
+        name    "label2"
+        baseparm
+        label   "Input #2 Label"
+        export  all
+    }
+    parm {
+        name    "label3"
+        baseparm
+        label   "Input #3 Label"
+        export  all
+    }
+    parm {
+        name    "label4"
+        baseparm
+        label   "Input #4 Label"
+        export  all
+    }
+    parm {
+        name    "max_distance"
+        label   "Max Distance"
+        type    float
+        default { "32" }
+        range   { 4 256 }
+    }
+    parm {
+        name    "number_of_samples"
+        label   "Number of Samples"
+        type    integer
+        default { "16" }
+        range   { 1 64 }
+    }
+    parm {
+        name    "perpendicular_angle"
+        label   "Perpendicular Angle"
+        type    float
+        default { "0.8" }
+        range   { 0 1 }
+    }
+    parm {
+        name    "self_intersect_offset"
+        label   "Self Intersect Offset"
+        type    float
+        default { "1" }
+        range   { 1 4 }
+    }
+    parm {
+        name    "contrast"
+        label   "Contrast"
+        type    float
+        default { "1" }
+        range   { 0.001 10 }
+    }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.chn"
+Content-Type: text/plain
+
+{
+    channel max_distance {
+      lefttype = extend
+      righttype = extend
+      default = 32
+      flags = 0
+      segment { length = 0 value = 100 100 expr = ch(\"../max_distance\") }
+    }
+    channel number_of_samples {
+      lefttype = extend
+      righttype = extend
+      default = 16
+      flags = 0
+      segment { length = 0 value = 16 16 expr = ch(\"../number_of_samples\") }
+    }
+    channel perpendicular_angle {
+      lefttype = extend
+      righttype = extend
+      default = 0.80000000000000004
+      flags = 0
+      segment { length = 0 value = 0.80000000000000004 0.80000000000000004 expr = ch(\"../perpendicular_angle\") }
+    }
+    channel self_intersect_offset {
+      lefttype = extend
+      righttype = extend
+      default = 1
+      flags = 0
+      segment { length = 0 value = 1 1 expr = ch(\"../self_intersect_offset\") }
+    }
+    channel contrast {
+      lefttype = extend
+      righttype = extend
+      default = 1
+      flags = 0
+      segment { length = 0 value = 1 1 expr = ch(\"../contrast\") }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+label1	[ 0	locks=0 ]	(	Heightfield	)
+label2	[ 0	locks=0 ]	(	"Sub-Network Input #2"	)
+label3	[ 0	locks=0 ]	(	"Sub-Network Input #3"	)
+label4	[ 0	locks=0 ]	(	"Sub-Network Input #4"	)
+max_distance	[ 0	locks=0 ]	(	[ max_distance	0 ] 	)
+number_of_samples	[ 0	locks=0 ]	(	[ number_of_samples	0 ] 	)
+perpendicular_angle	[ 0	locks=0 ]	(	[ perpendicular_angle	0 ] 	)
+self_intersect_offset	[ 0	locks=0 ]	(	[ self_intersect_offset	0 ] 	)
+contrast	[ 0	locks=0 ]	(	[ contrast	0 ] 	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.inp"
+Content-Type: text/plain
+
+4
+0 -2.7755599999999997e-17 7.2240299999999991 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+1 3.9535999999999998 3.8355299999999999 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+2 3.9535999999999998 4.9650299999999996 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+3 6.2127999999999997 4.2873300179529181 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/ao_mutliple_rays.init"
+Content-Type: text/plain
+
+type = opencl
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/ao_mutliple_rays.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.77556e-17 4.96503
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	IN 1 1 "input1"
+}
+inputs
+{
+0 	IN 0 1
+}
+stat
+{
+  create 1516646289
+  modify 1537171304
+  author cs@RWC-WKS-001
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/ao_mutliple_rays.chn"
+Content-Type: text/plain
+
+{
+    channel bindings3_fval {
+      lefttype = extend
+      righttype = extend
+      default = 32
+      flags = 0
+      segment { length = 0 value = 32 32 expr = ch(\"../max_distance\") }
+    }
+    channel bindings4_intval {
+      lefttype = extend
+      righttype = extend
+      default = 16
+      flags = 0
+      segment { length = 0 value = 16 16 expr = ch(\"../number_of_samples\") }
+    }
+    channel bindings5_fval {
+      lefttype = extend
+      righttype = extend
+      default = 0.80000000000000004
+      flags = 0
+      segment { length = 0 value = 0.80000000000000004 0.80000000000000004 expr = ch(\"../perpendicular_angle\") }
+    }
+    channel bindings6_fval {
+      lefttype = extend
+      righttype = extend
+      default = 1
+      flags = 0
+      segment { length = 0 value = 1 1 expr = ch(\"../self_intersect_offset\") }
+    }
+    channel bindings7_fval {
+      lefttype = extend
+      righttype = extend
+      default = 1
+      flags = 0
+      segment { length = 0 value = 1 1 expr = ch(\"../contrast\") }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/ao_mutliple_rays.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+stdswitcher	[ 0	locks=0 ]	(	0	0	0	)
+kernelname	[ 0	locks=0 ]	(	kernelName	)
+usecode	[ 0	locks=0 ]	(	"off"	)
+kernelfile	[ 0	locks=0 ]	(	$HIP/ocl/heightfield_ao.cl	)
+kernelcode	[ 0	locks=0 ]	(	"// Following numbers assume a 1024x1024 heightfield
+//
+// height_stride_offset is the total number of voxel. 1024x1024=1048576 in a 1k heightfield.
+// height_stride_x = 1 ~ Start position of the voxel x ???
+// height_stride_y = 1024 ~ Resolution of the heightfield
+// height_stride_z = 1048576 ~ rezx * rezy ??
+// gidx is index in x of voxel. There are 1024 voxels in x
+// gidy is index in y of voxel. There are 1024 voxels in y
+// gidz is index in z of voxel. It's always 0 as heightfields are 2D
+// height_res_x = 1024
+// height_res_y = 1024
+// height_res_z = 1
+// height_voxelsize_x, y, z = 1
+//
+// reminder : P = {gidx, gidy, height[idx]};  Volume space
+
+#include \"heightfield.h\"
+#include \"math3d.h\"
+
+// /////////////////////////////////////////////////////////////////////////////////////////
+// Function that will return a new vector from the a u and v float.
+// The vector are generated like a hemisphere.
+// /////////////////////////////////////////////////////////////////////////////////////////
+float3 cosineSampleHemisphere(float u, float v) {
+    float r = sqrt(u);
+    float theta = 2.0f * 3.141592f * v;
+    
+    float x = r * cos(theta);
+    float y = r * sin(theta);
+    
+    float max_value = max(0.0f, 1.0f - u);
+    float3 vector = {x, y, sqrt(max_value)};
+    
+    vector = normalize(vector);
+    return vector;
+}
+
+// Function that will return 1 if an intersection is detected when ray marching in a given direction.
+// The check happens with the direction vector z pos and the height of the terrain under the vector.
+float intersectInVolume(float3 voxel_position_vs,
+                        float3 voxel_normal,
+                        float3 sample_direction,
+                        float sample_max_distance,
+                        float distance_bias,
+                        global float* height, 
+                        int height_stride_y, 
+                        int height_stride_offset,
+                        float voxel_size)
+{
+    // Build the needed origins in the different spaces we use.
+    // Example with a hypotetical 256x256 heightfield volume but with a 1x1 km in size.
+    // origin_2d_vs = x:128 y:128             // The center voxel 2D position in volume space
+    // origin_2d_ws = x:512 y:512             // The center voxel 2D position in world space
+    // origin_3d_ws = x:512 y:512 z:height    // The center voxel 3D position in world space
+    float  origin_height = voxel_position_vs.z;
+    float2 origin_2d_vs  = {voxel_position_vs.x, voxel_position_vs.y};
+    float2 origin_2d_ws  = {voxel_position_vs.x * voxel_size, voxel_position_vs.y * voxel_size};
+    float3 origin_3d_ws  = {origin_2d_ws.x, origin_2d_ws.y, origin_height};
+    
+    // The move_direction is the direction (N) multiplied by the voxel_size.
+    // Each iteration will move approx the length of the voxel size.
+    // The move_length is used to increament the while loop so we can stop at the max_distance.
+    float3 move_direction = sample_direction * voxel_size;
+    float  move_length    = length(move_direction);
+    
+    // Define the start position (new_pos). We do this in World Space and add
+    // the voxel_normal and the distance_bias to make sure we will not intersect
+    // with the same voxel we are starting from.
+    float3 new_pos = origin_3d_ws + (voxel_normal * distance_bias);
+    
+    // Init the ray travel distance to 0. This will be incremented when we ray march
+    // in the while loop. When we have traveled more the the sample_max_distance we stop.
+    float ray_travel_distance = 0.0f;
+    
+    // Start the while loop ray marching
+    while (ray_travel_distance < sample_max_distance) {
+        // Convert the position from World Space to Voxel Space
+        // so we can sample the volume in the correct space.
+        float new_pos_x_vs = new_pos.x / voxel_size;
+        float new_pos_y_vs = new_pos.y / voxel_size;
+    
+        // Get the new position x and y volume index. We round them because we
+        // don't want to sample a float position. Voxels are all int index.
+        int new_gidx = round(new_pos_x_vs);
+        int new_gidy = (round(new_pos_y_vs) * height_stride_y);
+        
+        // We remove 1 to both clamped values here make sure we dont go out of bound.
+        new_gidx = clamp(new_gidx, 0, height_stride_y - 1);
+        new_gidy = clamp(new_gidy, 0, (height_stride_y * height_stride_y) - 1);
+        
+        // Get the sample_idx to sample from and extract the height value from it (sample_height)
+        int   sample_idx    = height_stride_offset + new_gidx + new_gidy;
+        float sample_height = height[sample_idx];
+        
+        // Test if the ray height is lower than the sampled height. If yes, our ray is not
+        // under the terrain so an intersection point is detected. Return 1 if so.
+        // The return value is also considering the sample_max_distance value as weight.
+        if (new_pos.z < sample_height) {
+            return 1.0f - (ray_travel_distance / sample_max_distance);
+        }
+        
+        // When no intersection is detected, we increment the new_pos in the move direction
+        // essentialy ray marching one more step. We also increase the ray_travel_distance
+        new_pos += move_direction;
+        ray_travel_distance += move_length;
+    }
+    
+    // When no intersection has been found, we return 0.
+    return 0.0f;
+}
+
+kernel void kernelName( 
+                 int height_stride_x, 
+                 int height_stride_y, 
+                 int height_stride_z, 
+                 int height_stride_offset, 
+                 int height_res_x, 
+                 int height_res_y, 
+                 int height_res_z, 
+                 float height_voxelsize_x, 
+                 float height_voxelsize_y, 
+                 float height_voxelsize_z, 
+                 global float * height,
+                 int ao_stride_x, 
+                 int ao_stride_y, 
+                 int ao_stride_z, 
+                 int ao_stride_offset, 
+                 global float * ao,
+                 float max_distance,
+                 int samples,
+                 float angle,
+                 float protection_distance,
+                 float power
+)
+{
+    int gidx = get_global_id(0);
+    int gidy = get_global_id(1);
+    int gidz = get_global_id(2);
+
+    // UP is in Volume Space
+    float3 up = {0,0,1};
+    int idx = height_stride_offset + height_stride_x * gidx + height_stride_y * gidy;
+    
+    float3 P = {gidx, gidy, height[idx]};
+    float3 N = buildVoxelNormal(gidx,
+                                gidy, 
+                                height, 
+                                height_stride_x, 
+                                height_stride_y, 
+                                height_stride_offset, 
+                                height_voxelsize_x);
+
+    float4 rotation = buildQuatFromTwoVectors(up, N);
+    
+    // This value will store the number of hit and the hit distance as well.
+    // If a hit happened close to the max distance allowed, the hit sample
+    // will have a low value.
+    float hit_samples = 0;
+    
+    // Loop samples i
+    for (int i = 0; i < samples; i++) {
+        // Loop samples j
+        for (int j = 0; j < samples; j++) {
+            // The angle value limits the hemisphere rays to not shoot horizontaly.
+            float n_i = (float)i / ((float)samples - angle);
+            float n_j = (float)j / (float)samples;
+            
+            // Get a sample dir using the Hemisphere function
+            float3 sample_dir = cosineSampleHemisphere(n_i, n_j);
+            
+            // Rotate the sample direction to put it in the N direction
+            float3 rotated_sample_dir = rotateVectorByQuat(sample_dir, rotation);
+            
+            // Try to find an intersection
+            hit_samples += intersectInVolume(P, 
+                                             N, 
+                                             rotated_sample_dir, 
+                                             max_distance, 
+                                             protection_distance,
+                                             height, 
+                                             height_stride_y, 
+                                             height_stride_offset, 
+                                             height_voxelsize_x);
+        }
+    }
+    
+    // Compute the AO value by dividing the hit sample and the number of samples.
+    float ao_value = hit_samples / ((float)samples * (float)samples);
+    
+    // Post-processing
+    ao_value = pow(ao_value, power);
+    ao_value = clamp(ao_value, 0.0f, 1.0f);
+    ao_value = 1 - ao_value;
+    
+    ao[idx] = ao_value;
+}
+"	)
+kerneloptions	[ 0	locks=0 ]	(	-I$HIP/ocl/	)
+usewritebackkernel	[ 0	locks=0 ]	(	"off"	)
+writebackkernelname	[ 0	locks=0 ]	(	writeBack	)
+generatekernel	[ 0	locks=0 ]	(	0	)
+recompile	[ 0	locks=0 ]	(	"off"	)
+runover	[ 0	locks=0 ]	(	"volume"	)
+iterations	[ 0	locks=0 ]	(	1	)
+worksets_begin	[ 0	locks=0 ]	(	""	)
+worksets_length	[ 0	locks=0 ]	(	""	)
+finish	[ 0	locks=0 ]	(	"on"	)
+time	[ 0	locks=0 ]	(	"off"	)
+timeinc	[ 0	locks=0 ]	(	"off"	)
+timescale	[ 0	locks=0 ]	(	1	)
+timemethod	[ 0	locks=0 ]	(	"invert"	)
+xnoise	[ 0	locks=0 ]	(	"off"	)
+bindings	[ 0	locks=0 ]	(	7	)
+bindings1_name	[ 0	locks=0 ]	(	height	)
+stdswitcher_child_1	[ 0	locks=0 ]	(	0	)
+bindings1_type	[ 0	locks=0 ]	(	"volume"	)
+bindings1_intval	[ 0	locks=0 ]	(	0	)
+bindings1_fval	[ 0	locks=0 ]	(	0	)
+bindings1_v3val	[ 0	locks=0 ]	(	0	0	0	)
+bindings1_v4val	[ 0	locks=0 ]	(	0	0	0	0	)
+bindings1_timescale	[ 0	locks=0 ]	(	"none"	)
+bindings1_ramp	[ 0	locks=0 ]	(	2	)
+bindings1_rampsize	[ 0	locks=0 ]	(	1024	)
+bindings1_volume	[ 0	locks=0 ]	(	height	)
+bindings1_forcealign	[ 0	locks=0 ]	(	"off"	)
+bindings1_resolution	[ 0	locks=0 ]	(	"on"	)
+bindings1_voxelsize	[ 0	locks=0 ]	(	"on"	)
+bindings1_xformtoworld	[ 0	locks=0 ]	(	"off"	)
+bindings1_xformtovoxel	[ 0	locks=0 ]	(	"off"	)
+bindings1_attribute	[ 0	locks=0 ]	(	""	)
+bindings1_attribclass	[ 0	locks=0 ]	(	"point"	)
+bindings1_attribtype	[ 0	locks=0 ]	(	"float"	)
+bindings1_attribsize	[ 0	locks=0 ]	(	1	)
+bindings1_readable	[ 0	locks=0 ]	(	"on"	)
+bindings1_writeable	[ 0	locks=0 ]	(	"off"	)
+bindings1_optional	[ 0	locks=0 ]	(	"off"	)
+bindings1_ramp1pos	[ 0	locks=0 ]	(	0	)
+bindings1_ramp1value	[ 0	locks=0 ]	(	0	)
+bindings1_ramp1interp	[ 0	locks=0 ]	(	"linear"	)
+bindings1_ramp2pos	[ 0	locks=0 ]	(	1	)
+bindings1_ramp2value	[ 0	locks=0 ]	(	1	)
+bindings1_ramp2interp	[ 0	locks=0 ]	(	"linear"	)
+bindings2_name	[ 0	locks=0	autoscope=0 ]	(	layer_ao	)
+stdswitcher_child_2	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings2_type	[ 0	locks=0	autoscope=0 ]	(	"volume"	)
+bindings2_intval	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings2_fval	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings2_v3val	[ 0	locks=0 ]	(	0	0	0	)
+bindings2_v4val	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bindings2_timescale	[ 0	locks=0	autoscope=0 ]	(	"none"	)
+bindings2_ramp	[ 0	locks=0 ]	(	2	)
+bindings2_rampsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+bindings2_volume	[ 0	locks=0	autoscope=0 ]	(	layer_ao	)
+bindings2_forcealign	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings2_resolution	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings2_voxelsize	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings2_xformtoworld	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings2_xformtovoxel	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings2_attribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings2_attribclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+bindings2_attribtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings2_attribsize	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings2_readable	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings2_writeable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings2_optional	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings2_ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings2_ramp1value	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings2_ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings2_ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings2_ramp2value	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings2_ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings3_name	[ 0	locks=0	autoscope=0 ]	(	max_distance	)
+stdswitcher_child_3	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings3_type	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings3_intval	[ 0	locks=0	autoscope=0 ]	(	4	)
+bindings3_fval	[ 8	locks=0	autoscope=0 ]	(	[ bindings3_fval	0 ] 	)
+bindings3_v3val	[ 0	locks=0 ]	(	0	0	0	)
+bindings3_v4val	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bindings3_timescale	[ 0	locks=0	autoscope=0 ]	(	"none"	)
+bindings3_ramp	[ 0	locks=0 ]	(	2	)
+bindings3_rampsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+bindings3_volume	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings3_forcealign	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings3_resolution	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings3_voxelsize	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings3_xformtoworld	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings3_xformtovoxel	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings3_attribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings3_attribclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+bindings3_attribtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings3_attribsize	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings3_readable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings3_writeable	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings3_optional	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings3_ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings3_ramp1value	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings3_ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings3_ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings3_ramp2value	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings3_ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings4_name	[ 0	locks=0	autoscope=0 ]	(	samples	)
+stdswitcher_child_4	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings4_type	[ 0	locks=0	autoscope=0 ]	(	"int"	)
+bindings4_intval	[ 8	locks=0	autoscope=0 ]	(	[ bindings4_intval	0 ] 	)
+bindings4_fval	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings4_v3val	[ 0	locks=0 ]	(	0	0	0	)
+bindings4_v4val	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bindings4_timescale	[ 0	locks=0	autoscope=0 ]	(	"none"	)
+bindings4_ramp	[ 0	locks=0 ]	(	2	)
+bindings4_rampsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+bindings4_volume	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings4_forcealign	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings4_resolution	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings4_voxelsize	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings4_xformtoworld	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings4_xformtovoxel	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings4_attribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings4_attribclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+bindings4_attribtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings4_attribsize	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings4_readable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings4_writeable	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings4_optional	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings4_ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings4_ramp1value	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings4_ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings4_ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings4_ramp2value	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings4_ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings5_name	[ 0	locks=0	autoscope=0 ]	(	angle	)
+stdswitcher_child_5	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings5_type	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings5_intval	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings5_fval	[ 8	locks=0	autoscope=0 ]	(	[ bindings5_fval	0 ] 	)
+bindings5_v3val	[ 0	locks=0 ]	(	0	0	0	)
+bindings5_v4val	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bindings5_timescale	[ 0	locks=0	autoscope=0 ]	(	"none"	)
+bindings5_ramp	[ 0	locks=0 ]	(	2	)
+bindings5_rampsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+bindings5_volume	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings5_forcealign	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings5_resolution	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings5_voxelsize	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings5_xformtoworld	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings5_xformtovoxel	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings5_attribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings5_attribclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+bindings5_attribtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings5_attribsize	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings5_readable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings5_writeable	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings5_optional	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings5_ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings5_ramp1value	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings5_ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings5_ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings5_ramp2value	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings5_ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings6_name	[ 0	locks=0	autoscope=0 ]	(	protection_distance	)
+stdswitcher_child_6	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings6_type	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings6_intval	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings6_fval	[ 8	locks=0	autoscope=0 ]	(	[ bindings6_fval	0 ] 	)
+bindings6_v3val	[ 0	locks=0 ]	(	0	0	0	)
+bindings6_v4val	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bindings6_timescale	[ 0	locks=0	autoscope=0 ]	(	"none"	)
+bindings6_ramp	[ 0	locks=0 ]	(	2	)
+bindings6_rampsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+bindings6_volume	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings6_forcealign	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings6_resolution	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings6_voxelsize	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings6_xformtoworld	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings6_xformtovoxel	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings6_attribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings6_attribclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+bindings6_attribtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings6_attribsize	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings6_readable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings6_writeable	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings6_optional	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings6_ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings6_ramp1value	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings6_ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings6_ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings6_ramp2value	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings6_ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings7_name	[ 0	locks=0	autoscope=0 ]	(	power	)
+stdswitcher_child_7	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings7_type	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings7_intval	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings7_fval	[ 8	locks=0	autoscope=0 ]	(	[ bindings7_fval	0 ] 	)
+bindings7_v3val	[ 0	locks=0 ]	(	0	0	0	)
+bindings7_v4val	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bindings7_timescale	[ 0	locks=0	autoscope=0 ]	(	"none"	)
+bindings7_ramp	[ 0	locks=0 ]	(	2	)
+bindings7_rampsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+bindings7_volume	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings7_forcealign	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings7_resolution	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings7_voxelsize	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings7_xformtoworld	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings7_xformtovoxel	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings7_attribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindings7_attribclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+bindings7_attribtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+bindings7_attribsize	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings7_readable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings7_writeable	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings7_optional	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+bindings7_ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings7_ramp1value	[ 0	locks=0	autoscope=0 ]	(	0	)
+bindings7_ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+bindings7_ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings7_ramp2value	[ 0	locks=0	autoscope=0 ]	(	1	)
+bindings7_ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/ao_mutliple_rays.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/IN.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/IN.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.77556e-17 6.09453
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	(0) "" 1 "input1"
+}
+inputs
+{
+0 	(0) 0 1
+}
+stat
+{
+  create 1518041009
+  modify 1518198650
+  author cs@RWC-WKS-001
+  access 0777
+}
+color UT_Color RGB 0.6 0.7 0.77 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/IN.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+copyinput	[ 0	locks=0 ]	(	"on"	)
+cacheinput	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/IN.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/OUT.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/OUT.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.77556e-17 3.83553
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault off exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	ao_mutliple_rays 1 1 "input1"
+}
+inputs
+{
+0 	ao_mutliple_rays 0 1
+}
+stat
+{
+  create 1518041009
+  modify 1518198652
+  author cs@RWC-WKS-001
+  access 0777
+}
+color UT_Color RGB 0 0 0 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/OUT.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+copyinput	[ 0	locks=0 ]	(	"on"	)
+cacheinput	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1/OUT.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.order"
+Content-Type: text/plain
+
+3
+ao_mutliple_rays
+IN
+OUT
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_compute_ao1.net"
+Content-Type: text/plain
+
+1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow1.init"
+Content-Type: text/plain
+
+type = heightfield_copylayer
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -5.99262 -1.14019
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_erode2 1 1 "input1"
+}
+inputs
+{
+0 	heightfield_erode2 0 1
+}
+stat
+{
+  create 1536046739
+  modify 1537239044
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+numcopy	[ 0	locks=0 ]	(	1	)
+srcname1	[ 0	locks=0 ]	(	mask	)
+dstname1	[ 0	locks=0 ]	(	""	)
+copysrc1	[ 0	locks=0 ]	(	"on"	)
+replacedst1	[ 0	locks=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.init"
+Content-Type: text/plain
+
+type = output
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -1.23159 -35.9121
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	copytopoints1 2 1 "input1"
+}
+inputs
+{
+0 	copytopoints1 0 1
+}
+stat
+{
+  create 1536153767
+  modify 1537615859
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+outputidx	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output2.init"
+Content-Type: text/plain
+
+type = output
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 3.15779 -26.2994
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	foreach_end1 1 1 "input1"
+}
+inputs
+{
+0 	foreach_end1 0 1
+}
+stat
+{
+  create 1536153767
+  modify 1537616221
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+outputidx	[ 8	locks=0 ]	(	1	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python1.init"
+Content-Type: text/plain
+
+type = python
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "read json parameter and init heightfield attribute"
+position -5.38537 7.69412
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+1 	switch2 1 1 "input1"
+}
+inputs
+{
+0 	switch2 0 1
+}
+stat
+{
+  create 1537085203
+  modify 1537623837
+  author zwybo@wenyong-tpx1c
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+python	[ 0	locks=0 ]	(	"node = hou.pwd()
+geo = node.geometry()
+
+# Add code to modify contents of geo.
+# Use drop down menu to select examples.
+import sys
+import os
+sys.path.append(\"$HIP/python\")
+
+print os.path.expandvars('$HIP/python')
+
+import hda.FoliageSpawnInit
+reload(hda.FoliageSpawnInit)
+from hda.FoliageSpawnInit import FoliageSpawnInit as FSI
+
+
+fsi = FSI()
+
+fsi.run() 
+
+
+"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/python1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow2.init"
+Content-Type: text/plain
+
+type = heightfield_copylayer
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "debug view layer"
+position -1.95867 -1.70503
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	heightfield_erode2 1 1 "input1"
+}
+inputs
+{
+0 	heightfield_erode2 0 1
+}
+stat
+{
+  create 1536046739
+  modify 1537174826
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+numcopy	[ 0	locks=0 ]	(	1	)
+srcname1	[ 0	locks=0 ]	(	layer_slope	)
+dstname1	[ 0	locks=0 ]	(	mask	)
+copysrc1	[ 0	locks=0 ]	(	"on"	)
+replacedst1	[ 0	locks=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/heightfield_copyflow2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_end1.init"
+Content-Type: text/plain
+
+type = block_end
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_end1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -1.40039 -20.632
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	attribwrangle4 1 1 "input1"
+}
+inputs
+{
+0 	attribwrangle4 0 1
+}
+stat
+{
+  create 1537358813
+  modify 1537447527
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.75 0.4 0 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_end1.chn"
+Content-Type: text/plain
+
+{
+    channel iterations {
+      lefttype = extend
+      righttype = extend
+      default = 10
+      flags = 0
+      segment { length = 0 value = 10 10 expr = ch(\"../ArrNum_FoliageTypes\") }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_end1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+itermethod	[ 0	locks=0 ]	(	"count"	)
+method	[ 0	locks=0 ]	(	"feedback"	)
+iterations	[ 8	locks=0 ]	(	[ iterations	2 ] 	)
+startvalue	[ 0	locks=0 ]	(	1	)
+increment	[ 0	locks=0 ]	(	1	)
+class	[ 0	locks=0 ]	(	"point"	)
+useattrib	[ 0	locks=0 ]	(	"on"	)
+attrib	[ 0	locks=0 ]	(	""	)
+usemaxiter	[ 0	locks=0 ]	(	"off"	)
+maxiter	[ 0	locks=0 ]	(	10	)
+blockpath	[ 0	locks=0 ]	(	../foreach_begin1	)
+templatepath	[ 0	locks=0 ]	(	../foreach_begin1	)
+resetcookpass	[ 0	locks=0 ]	(	0	)
+dosinglepass	[ 0	locks=0 ]	(	"off"	)
+singlepass	[ 0	locks=0 ]	(	0	)
+stopcondition	[ 0	locks=0 ]	(	0	)
+multithread	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_end1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_begin1.init"
+Content-Type: text/plain
+
+type = block_begin
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_begin1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -6.94914 -4.91096
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+1 	scatter1 1 1 "input1"
+}
+inputs
+{
+0 	scatter1 0 1
+}
+stat
+{
+  create 1537358813
+  modify 1537623860
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.75 0.4 0 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_begin1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+method	[ 0	locks=0 ]	(	"feedback"	)
+blockpath	[ 0	locks=0 ]	(	../foreach_end1	)
+createmetablock	[ 0	locks=0 ]	(	0	)
+label1	[ 0	locks=0 ]	(	"iteration, numiterations, value, ivalue"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_begin1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_count1.init"
+Content-Type: text/plain
+
+type = block_begin
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_count1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -0.203417 -4.91096
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create 1537358813
+  modify 1537623860
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.75 0.4 0 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_count1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+method	[ 0	locks=0 ]	(	"metadata"	)
+blockpath	[ 0	locks=0 ]	(	../foreach_end1	)
+createmetablock	[ 0	locks=0 ]	(	0	)
+label1	[ 0	locks=0 ]	(	"iteration, numiterations, value, ivalue"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/foreach_count1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.init"
+Content-Type: text/plain
+
+type = merge
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -5.71312 -12.8969
+connectornextid 0
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+3 	foreach_begin1 0 1 "input1"
+2 	attribwrangle2 0 1 "input2"
+}
+inputs
+{
+0 	foreach_begin1 0 1
+1 	attribwrangle2 0 1
+}
+stat
+{
+  create 1537363221
+  modify 1537447352
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.init"
+Content-Type: text/plain
+
+type = switch
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -5.80076 9.82251
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	null1 1 1 "input1"
+}
+inputs
+{
+0 	null1 0 1
+}
+stat
+{
+  create 1535721494
+  modify 1537614906
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 1 0.7 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.chn"
+Content-Type: text/plain
+
+{
+    channel input {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = "npoints(\"../null1\") == 0" }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+input	[ 8	locks=0 ]	(	[ input	0 ] 	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -6.24883 14.1354
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	(0) "" 1 "input1"
+}
+inputs
+{
+0 	(0) 0 1
+}
+stat
+{
+  create 1537607059
+  modify 1537609058
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.6 0.7 0.77 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+copyinput	[ 0	locks=0 ]	(	"on"	)
+cacheinput	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/scatter1.init"
+Content-Type: text/plain
+
+type = scatter::2.0
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/scatter1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment 布置点
+position -11.9304 -2.43021
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	attribwrangle5 1 1 "input1"
+}
+inputs
+{
+0 	attribwrangle5 0 1
+}
+stat
+{
+  create 1535377292
+  modify 1537616337
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/scatter1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0 ]	(	""	)
+stdswitcher	[ 0	locks=0 ]	(	0	0	)
+generateby	[ 0	locks=0 ]	(	"bydensity"	)
+densityscale	[ 0	locks=0 ]	(	10	)
+usedensityattrib	[ 0	locks=0 ]	(	"on"	)
+densityattrib	[ 8	locks=0 ]	(	density	)
+useareaattrib	[ 0	locks=0 ]	(	"off"	)
+areaattrib	[ 0	locks=0 ]	(	area	)
+forcetotal	[ 0	locks=0 ]	(	"off"	)
+npts	[ 0	locks=0 ]	(	1000	)
+usedensitytexture	[ 0	locks=0 ]	(	"off"	)
+densitytexture	[ 0	locks=0 ]	(	default.pic	)
+primcountattrib	[ 0	locks=0 ]	(	count	)
+useemergencylimit	[ 0	locks=0 ]	(	"off"	)
+emergencylimit	[ 0	locks=0 ]	(	1000000	)
+seed	[ 0	locks=0 ]	(	0	)
+overrideprimseed	[ 0	locks=0 ]	(	"off"	)
+primseedattrib	[ 0	locks=0 ]	(	primid	)
+randomizeorder	[ 0	locks=0 ]	(	"on"	)
+relaxpoints	[ 0	locks=0 ]	(	"on"	)
+relaxiterations	[ 0	locks=0 ]	(	10	)
+scaleradiiby	[ 0	locks=0 ]	(	1	)
+usemaxradius	[ 0	locks=0 ]	(	"on"	)
+maxradius	[ 0	locks=0 ]	(	10	)
+useprimnumattrib	[ 0	locks=0 ]	(	"off"	)
+primnumattrib	[ 0	locks=0 ]	(	sourceprim	)
+useprimuvwattrib	[ 0	locks=0 ]	(	"off"	)
+primuvwattrib	[ 0	locks=0 ]	(	sourceprimuv	)
+useoutputdensityattrib	[ 0	locks=0 ]	(	"off"	)
+outputdensityattrib	[ 0	locks=0 ]	(	density	)
+useoutputradiusattrib	[ 0	locks=0 ]	(	"off"	)
+outputradiusattrib	[ 0	locks=0 ]	(	pscale	)
+radiusintexturespace	[ 0	locks=0 ]	(	"off"	)
+pointattribs	[ 0	locks=0 ]	(	*	)
+vertattribs	[ 0	locks=0 ]	(	""	)
+primattribs	[ 0	locks=0 ]	(	""	)
+detailattribs	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/scatter1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/group1.init"
+Content-Type: text/plain
+
+type = groupcreate
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/group1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "通过normal朝上筛选并组成upfacing group"
+position -12.1894 4.76965
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight on unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	(1) "" 1 "input1"
+}
+inputs
+{
+0 	(1) 0 1
+}
+stat
+{
+  create 1535423084
+  modify 1537616202
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/group1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+groupname	[ 0	locks=0 ]	(	upfacing	)
+grouptype	[ 0	locks=0 ]	(	"primitive"	)
+mergeop	[ 0	locks=0 ]	(	"replace"	)
+folder0	[ 0	locks=0 ]	(	0	)
+groupbase	[ 0	locks=0 ]	(	"off"	)
+basegroup	[ 0	locks=0 ]	(	""	)
+ordered	[ 0	locks=0 ]	(	"off"	)
+geotype	[ 0	locks=0 ]	(	"all"	)
+switcher3	[ 0	locks=0 ]	(	0	)
+groupbounding	[ 0	locks=0 ]	(	"off"	)
+boundtype	[ 0	locks=0 ]	(	"usebbox"	)
+size	[ 0	locks=0 ]	(	1	1	1	)
+t	[ 0	locks=0 ]	(	0	0	0	)
+includenotwhollycontained	[ 0	locks=0 ]	(	"off"	)
+iso	[ 0	locks=0 ]	(	0	)
+invertvolume	[ 0	locks=0 ]	(	"off"	)
+switcher4	[ 0	locks=0 ]	(	0	)
+groupnormal	[ 0	locks=0 ]	(	"on"	)
+camerapath	[ 0	locks=0 ]	(	""	)
+nonplanar	[ 0	locks=0 ]	(	"off"	)
+nonplanartol	[ 0	locks=0 ]	(	0.001	)
+dir	[ 0	locks=0 ]	(	0	1	0	)
+angle	[ 0	locks=0 ]	(	20	)
+switcher5	[ 0	locks=0 ]	(	0	)
+groupedges	[ 0	locks=0 ]	(	"off"	)
+dominedgeangle	[ 0	locks=0 ]	(	"off"	)
+minedgeangle	[ 0	locks=0 ]	(	20	)
+domaxedgeangle	[ 0	locks=0 ]	(	"off"	)
+maxedgeangle	[ 0	locks=0 ]	(	20	)
+edgeanglebetweenedges	[ 0	locks=0 ]	(	"off"	)
+dominedgelen	[ 0	locks=0 ]	(	"off"	)
+minedgelen	[ 0	locks=0 ]	(	0	)
+domaxedgelen	[ 0	locks=0 ]	(	"off"	)
+maxedgelen	[ 0	locks=0 ]	(	0	)
+dodepth	[ 0	locks=0 ]	(	"off"	)
+edgestep	[ 0	locks=0 ]	(	0	)
+edgeptgrp	[ 0	locks=0 ]	(	0	)
+unshared	[ 0	locks=0 ]	(	"off"	)
+boundarygroups	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/group1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.init"
+Content-Type: text/plain
+
+type = blast
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment 移除除了upfacing以外的内容
+position -12.3934 3.12974
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	group1 1 1 "input1"
+}
+inputs
+{
+0 	group1 0 1
+}
+stat
+{
+  create 1535423100
+  modify 1537616202
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0 ]	(	upfacing	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+computenorms	[ 0	locks=0 ]	(	"off"	)
+negate	[ 0	locks=0 ]	(	"on"	)
+fillhole	[ 0	locks=0 ]	(	"off"	)
+removegrp	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.order"
+Content-Type: text/plain
+
+37
+heightfield_noise1
+box1
+copytopoints1
+heightfield1
+curve1
+subdivide1
+polyextrude1
+boolean2
+heightfield_noise2
+heightfield2
+convertheightfield2
+init_layers
+heightfield_compute_ao1
+heightfield_slope
+heightfield_erode2
+heightfield_copyflow1
+attribwrangle2
+heightfield_scatter1
+heightfield_wrangle1
+output1
+output2
+attribwrangle1
+python1
+heightfield_copyflow2
+attribwrangle3
+attribwrangle4
+foreach_end1
+foreach_begin1
+foreach_count1
+merge1
+switch2
+null1
+scatter1
+group1
+blast2
+heightfield_maskbyobject1
+attribwrangle5
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.net"
+Content-Type: text/plain
+
+1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY--

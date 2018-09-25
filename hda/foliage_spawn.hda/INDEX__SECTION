@@ -1,0 +1,14 @@
+Operator:     foliage_spawn
+Label:        Foliage spawn
+Path:         oplib:/Sop/foliage_spawn?Sop/foliage_spawn
+Icon:         SOP_subnet
+Table:        Sop
+License:      
+Extra:        
+User:         
+Inputs:       0 to 2
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Sun Sep 16 16:18:51 2018
+
