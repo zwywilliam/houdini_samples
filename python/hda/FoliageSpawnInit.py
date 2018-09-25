@@ -15,7 +15,7 @@ class FoliageSpawnInit(object):
             valUseJsonInput = parmUseJsonInput.evalAsInt()
             if valUseJsonInput > 0:
                 hjson = HoudiniParamJson()
-                hippath = os.getenv('HIP', "unknown path")
+                hippath = hou.getenv('GS_HIP_FOLDER', "unknown path")
                 hjson.load_parameter_and_apply(hippath + "/tmp/foliage_spawn.json")
                 #hjson.load_detail_and_apply(hippath + "/tmp/foliage_spawn.json")
 
