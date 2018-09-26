@@ -19,7 +19,7 @@ class FoliageSpawnInit(object):
                 hjson.load_parameter_and_apply(hippath + "/tmp/foliage_spawn.json")
                 #hjson.load_detail_and_apply(hippath + "/tmp/foliage_spawn.json")
 
-        
+    def calc_height(self):
         node = hou.pwd()
         geo = node.geometry()
         range = terraintoolutils.computeInputRange(node, 'height')

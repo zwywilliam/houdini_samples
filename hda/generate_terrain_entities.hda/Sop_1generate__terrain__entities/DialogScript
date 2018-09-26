@@ -28,6 +28,12 @@
             default { "0" }
         }
         parm {
+            name    "Refresh"
+            label   "Refresh"
+            type    toggle
+            default { "0" }
+        }
+        parm {
             name    "RandomSeed"
             label   "RandomSeed"
             type    integer
@@ -55,7 +61,7 @@
         }
 
         group {
-            name    "folder6_#"
+            name    "folder1_#_1"
             label   "Viability"
 
             multiparm {
@@ -87,7 +93,7 @@
         }
 
         group {
-            name    "folder6_#_1"
+            name    "folder1_#_2"
             label   "Size"
 
             multiparm {
@@ -126,7 +132,7 @@
         }
 
         group {
-            name    "folder6_#_2"
+            name    "folder1_#_3"
             label   "Age"
 
             parm {
@@ -139,7 +145,7 @@
         }
 
         group {
-            name    "folder6_#_3"
+            name    "folder1_#_4"
             label   "Density"
 
             parm {
@@ -152,7 +158,7 @@
         }
 
         group {
-            name    "folder6_#_4"
+            name    "folder1_#_5"
             label   "Preview"
 
             parm {
