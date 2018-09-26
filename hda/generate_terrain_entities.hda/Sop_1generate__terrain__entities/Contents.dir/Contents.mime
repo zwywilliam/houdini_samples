@@ -51,7 +51,7 @@ inputs
 stat
 {
   create 1535527433
-  modify 1537885268
+  modify 1537954618
   author Win10base@wenyong-pc
   access 0777
 }
@@ -77,7 +77,7 @@ Content-Type: text/plain
 
 3
 0 -6.2488331501446153 16.164000553537281 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
-1 -11.930353886818523 8.1659433049335419 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+1 -11.308283966305373 11.733697260817781 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
 2 9.264496169496784 16.68012438119289 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -646,7 +646,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -5.99262 0.916756
+position -6.01423 0.115881
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -664,7 +664,7 @@ inputs
 stat
 {
   create 1536046704
-  modify 1537447241
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -781,7 +781,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -5.99262 -0.154219
+position -6.01423 -0.955094
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -799,7 +799,7 @@ inputs
 stat
 {
   create 1536046726
-  modify 1537445327
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -931,7 +931,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "init point data"
-position -4.21867 -10.7774
+position -4.24028 -11.5783
 connectornextid 4
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -953,7 +953,7 @@ inputs
 stat
 {
   create 1536136889
-  modify 1537506015
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1036,7 +1036,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -4.67856 -9.35209
+position -4.70017 -10.153
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -1054,7 +1054,7 @@ inputs
 stat
 {
   create 1536153203
-  modify 1537616289
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1121,10 +1121,10 @@ Content-Disposition: attachment; filename="hdaroot/heightfield_wrangle1.def"
 Content-Type: text/plain
 
 sopflags sopflags = 
-comment ""
-position -4.85194 -7.26655
+comment "根据配置产生viability mask"
+position -4.87355 -8.06743
 connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
 {
 1 "output1"
@@ -1142,7 +1142,7 @@ inputs
 stat
 {
   create 1536153436
-  modify 1537447272
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1204,7 +1204,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -2.82772 -29.4095
+position -2.84933 -30.2104
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -1222,7 +1222,7 @@ inputs
 stat
 {
   create 1536585179
-  modify 1537844253
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1283,7 +1283,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "viability selection，通过物种竞争移除重叠的植物"
-position -5.07861 -15.9569
+position -5.10022 -16.7578
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -1301,7 +1301,7 @@ inputs
 stat
 {
   create 1537185807
-  modify 1537615486
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1364,7 +1364,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment 根据上一个节点的结果移除点阵
-position -4.61061 -17.714
+position -4.63222 -18.5149
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -1382,7 +1382,7 @@ inputs
 stat
 {
   create 1537185807
-  modify 1537615514
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1444,7 +1444,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment 通过这个节点将模型阻挡的区域移除
-position -5.81395 3.56912
+position -7.15567 3.47764
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -1454,17 +1454,17 @@ outputsNamed3
 inputsNamed3
 {
 0 	init_layers 1 1 "input1"
-2 	(1) "" 1 "input2"
+2 	null2 1 1 "input2"
 }
 inputs
 {
 0 	init_layers 0 1
-1 	(1) 0 1
+1 	null2 0 1
 }
 stat
 {
   create 1537615293
-  modify 1537615796
+  modify 1537954171
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1595,7 +1595,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -0.166488 13.7561
+position 1.7217 7.06331
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -1604,16 +1604,16 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	python1 0 1 "input1"
+0 	heightfield_copyflow1 1 1 "input1"
 }
 inputs
 {
-0 	python1 0 1
+0 	heightfield_copyflow1 0 1
 }
 stat
 {
   create 1537884169
-  modify 1537884793
+  modify 1537953783
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1667,7 +1667,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 1.64412 11.5611
+position 3.53231 4.86831
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -1685,7 +1685,7 @@ inputs
 stat
 {
   create 1537884267
-  modify 1537884948
+  modify 1537937692
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1706,7 +1706,18 @@ grouptype	[ 0	locks=0 ]	(	"guess"	)
 class	[ 0	locks=0 ]	(	"point"	)
 vex_numcount	[ 0	locks=0 ]	(	10	)
 vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
-snippet	[ 0	locks=0 ]	(	"s@unreal_instance = chs(\"../FoliageTypes_SizeVariants_MeshAsset1_2\");"	)
+snippet	[ 0	locks=0 ]	(	"#include \"test_include.vfl\"
+
+if(@ptnum % 2 == 1)
+{
+s@unreal_instance = get_testname();
+}
+else
+{
+s@unreal_instance = chs(\"../FoliageTypes_SizeVariants_MeshAsset1_2\");
+}
+
+"	)
 exportlist	[ 0	locks=0 ]	(	*	)
 vex_strict	[ 0	locks=0 ]	(	"off"	)
 autobind	[ 0	locks=0 ]	(	"on"	)
@@ -1723,6 +1734,95 @@ vex_selectiongroup	[ 0	locks=0 ]	(	""	)
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/attribwrangle6.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle7.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle7.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -12.1894 -5.32714
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	scatter1 1 1 "input1"
+}
+inputs
+{
+0 	scatter1 0 1
+}
+stat
+{
+  create 1537884267
+  modify 1537951743
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle7.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0 ]	(	0	0	)
+group	[ 0	locks=0 ]	(	""	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+class	[ 0	locks=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
+snippet	[ 0	locks=0 ]	(	"#include \"test_include.vfl\"
+
+if(@ptnum % 2 == 1)
+{
+s@unreal_instance = get_testname();
+}
+else
+{
+s@unreal_instance = chs(\"../FoliageTypes_SizeVariants_MeshAsset1_2\");
+}
+
+"	)
+exportlist	[ 0	locks=0 ]	(	*	)
+vex_strict	[ 0	locks=0 ]	(	"off"	)
+autobind	[ 0	locks=0 ]	(	"on"	)
+bindings	[ 0	locks=0 ]	(	0	)
+groupautobind	[ 0	locks=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0 ]	(	id	)
+vex_inplace	[ 0	locks=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle7.userdata"
 Content-Type: text/plain
 
 {
@@ -1815,7 +1915,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -3.21861 -33.27
+position -3.24022 -34.0709
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -1835,7 +1935,7 @@ inputs
 stat
 {
   create 1535344789
-  modify 1537884765
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -2547,7 +2647,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -5.99262 1.83138
+position -6.01423 0.902291
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -2556,16 +2656,16 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	heightfield_maskbyobject1 1 1 "input1"
+0 	switch1 1 1 "input1"
 }
 inputs
 {
-0 	heightfield_maskbyobject1 0 1
+0 	switch1 0 1
 }
 stat
 {
   create 1518041003
-  modify 1537844190
+  modify 1537954061
   author cs@RWC-WKS-001
   access 0777
 }
@@ -3389,7 +3489,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -5.99262 -1.14019
+position -6.01423 -1.94107
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3407,7 +3507,7 @@ inputs
 stat
 {
   create 1536046739
-  modify 1537239044
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3471,7 +3571,7 @@ inputs
 stat
 {
   create 1537085203
-  modify 1537884785
+  modify 1537951327
   author zwybo@wenyong-tpx1c
   access 0777
 }
@@ -3500,11 +3600,16 @@ import hda.FoliageSpawnInit
 reload(hda.FoliageSpawnInit)
 from hda.FoliageSpawnInit import FoliageSpawnInit as FSI
 
+from gscore.HoudiniDebug import HoudiniDebug as Dbg
 
-fsi = FSI()
-
-fsi.run() 
-
+try:
+    fsi = FSI()
+    
+    fsi.run() 
+    
+    Dbg.log_d(\"fsi run done \" + str(hou.node(\"../\").parm(\"ArrNum_FoliageTypes\").eval()))
+except Exception,e:
+    Dbg.log_d(str(e))
 
 "	)
 }
@@ -3533,7 +3638,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "debug view layer"
-position -1.95867 -1.70503
+position -1.98028 -2.50591
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -3551,7 +3656,7 @@ inputs
 stat
 {
   create 1536046739
-  modify 1537174826
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3597,7 +3702,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -1.40039 -20.632
+position -1.422 -21.4329
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
@@ -3615,7 +3720,7 @@ inputs
 stat
 {
   create 1537358813
-  modify 1537447527
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3687,7 +3792,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -6.94914 -4.91096
+position -6.96744 -5.53303
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
@@ -3696,16 +3801,16 @@ outputsNamed3
 }
 inputsNamed3
 {
-1 	scatter1 1 1 "input1"
+1 	switch3 1 1 "input1"
 }
 inputs
 {
-0 	scatter1 0 1
+0 	switch3 0 1
 }
 stat
 {
   create 1537358813
-  modify 1537884937
+  modify 1537954443
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3766,7 +3871,7 @@ inputs
 stat
 {
   create 1537358813
-  modify 1537884937
+  modify 1537954443
   author Win10base@wenyong-pc
   access 0777
 }
@@ -3811,7 +3916,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -5.71312 -12.8969
+position -5.73473 -13.6978
 connectornextid 0
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3831,7 +3936,7 @@ inputs
 stat
 {
   create 1537363221
-  modify 1537447352
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -4111,16 +4216,16 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	(1) "" 1 "input1"
+0 	null2 1 1 "input1"
 }
 inputs
 {
-0 	(1) 0 1
+0 	null2 0 1
 }
 stat
 {
   create 1535423084
-  modify 1537616202
+  modify 1537954168
   author Win10base@wenyong-pc
   access 0777
 }
@@ -4283,7 +4388,7 @@ inputs
 stat
 {
   create 1537843477
-  modify 1537884784
+  modify 1537951429
   author Win10base@wenyong-pc
   access 0777
 }
@@ -4306,15 +4411,27 @@ geo = node.geometry()
 import sys
 import os
 
-hda_path = hou.node(\"../\").type().definition().libraryFilePath()
-hou.putenv(\"GS_HDA_PATH\", hda_path)
-hou.putenv(\"GS_HDA_FOLDER\", os.path.dirname(hda_path))
-hou.putenv(\"GS_HIP_FOLDER\", os.path.dirname(hou.getenv(\"GS_HDA_FOLDER\")))
-hou.putenv(\"GS_OCL_FOLDER\", os.path.join(hou.getenv(\"GS_HDA_FOLDER\"), \"ocl\"))
-
-sys.path.append(\"$GS_HIP_FOLDER/python\")
-
-print hou.getenv(\"GS_HIP_FOLDER\")"	)
+try:
+    hda_path = hou.node(\"../\").type().definition().libraryFilePath()
+    hou.putenv(\"GS_HDA_PATH\", hda_path)
+    hou.putenv(\"GS_HDA_FOLDER\", os.path.dirname(hda_path))
+    hou.putenv(\"GS_HIP_FOLDER\", os.path.dirname(hou.getenv(\"GS_HDA_FOLDER\")))
+    hou.putenv(\"GS_OCL_FOLDER\", os.path.join(hou.getenv(\"GS_HDA_FOLDER\"), \"ocl\"))
+    
+    sys.path.append(hou.getenv(\"GS_HIP_FOLDER\")+\"/python\") #can't use $GS_HIP_FOLDER here
+    
+    
+    # debug
+    from gscore.HoudiniDebug import HoudiniDebug as Dbg
+    
+    
+    Dbg.enable_log(\"h:/hou_log.txt\")
+    Dbg.clear_log()
+    Dbg.log_d(\"HIP_FOLDER : \" + hou.getenv(\"GS_HIP_FOLDER\"))
+except Exception,e:
+    f = open('h:/hou_fatal.txt', 'w')
+    f.write(str(e))
+    f.close()"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -4341,7 +4458,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 3.17817 9.61989
+position 0.589452 -33.789
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -4349,16 +4466,16 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	attribwrangle6 1 1 "input1"
+0 	attribwrangle1 1 1 "input1"
 }
 inputs
 {
-0 	attribwrangle6 0 1
+0 	attribwrangle1 0 1
 }
 stat
 {
   create 1536153767
-  modify 1537884978
+  modify 1537954433
   author Win10base@wenyong-pc
   access 0777
 }
@@ -4400,7 +4517,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 1.04369 8.93647
+position 2.91027 1.4428
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -4420,7 +4537,7 @@ inputs
 stat
 {
   create 1537884833
-  modify 1537884978
+  modify 1537954060
   author Win10base@wenyong-pc
   access 0777
 }
@@ -4482,7 +4599,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 0.281344 10.5353
+position 2.16953 3.84251
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -4498,7 +4615,7 @@ inputs
 stat
 {
   create 1537884837
-  modify 1537884873
+  modify 1537927413
   author Win10base@wenyong-pc
   access 0777
 }
@@ -4540,10 +4657,280 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.init"
+Content-Type: text/plain
+
+type = switch
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment 如果null2没有数据，就忽略
+position -6.24883 2.16037
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+2 	heightfield_maskbyobject1 1 1 "input1"
+0 	init_layers 1 1 "input2"
+}
+inputs
+{
+0 	heightfield_maskbyobject1 0 1
+1 	init_layers 0 1
+}
+stat
+{
+  create 1537954060
+  modify 1537954240
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 1 0.7 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.chn"
+Content-Type: text/plain
+
+{
+    channel input {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = "npoints(\"../null2\") == 0" }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+input	[ 8	locks=0 ]	(	[ input	0 ] 	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null2.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -11.3083 10.1136
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	(1) "" 1 "input1"
+}
+inputs
+{
+0 	(1) 0 1
+}
+stat
+{
+  create 1537954081
+  modify 1537954351
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.6 0.7 0.77 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+copyinput	[ 0	locks=0 ]	(	"on"	)
+cacheinput	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch3.init"
+Content-Type: text/plain
+
+type = switch
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch3.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment 如果null2没有数据，就忽略
+position -9.05641 -4.10378
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	scatter1 1 1 "input1"
+2 	null3 0 1 "input2"
+}
+inputs
+{
+0 	scatter1 0 1
+1 	null3 0 1
+}
+stat
+{
+  create 1537954060
+  modify 1537954262
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.8 1 0.7 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch3.chn"
+Content-Type: text/plain
+
+{
+    channel input {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = "npoints(\"../null2\") == 0" }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch3.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+input	[ 8	locks=0 ]	(	[ input	0 ] 	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch3.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null3.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null3.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -8.91345 -2.16835
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create 1537954260
+  modify 1537954351
+  author Win10base@wenyong-pc
+  access 0777
+}
+color UT_Color RGB 0.6 0.7 0.77 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null3.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+copyinput	[ 0	locks=0 ]	(	"on"	)
+cacheinput	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null3.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"16.5.571"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-41
+46
 heightfield_noise1
 box1
 copytopoints1
@@ -4585,6 +4972,11 @@ heightfield_scatter2
 attribwrangle6
 copytopoints2
 box2
+attribwrangle7
+switch1
+null2
+switch3
+null3
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.net"

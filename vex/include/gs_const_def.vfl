@@ -1,6 +1,6 @@
 //s@unreal_instance = "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea";
 
-#define const_def "/Game/Procedural_EcoSystem/Meshes/Ground/SM_achillea3";
+#define const_def "/Game/Environment/Foliages/Speedtree/Models/Acacia_Low.Acacia_Low";
 
 
 
