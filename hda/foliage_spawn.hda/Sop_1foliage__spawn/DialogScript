@@ -8,6 +8,9 @@
     help {
 	""
     }
+    bindhandle BoxSizeX bound "Bounder" sx ""
+    bindhandle BoxSizeY bound "Bounder" sy ""
+    bindhandle BoxSizeZ bound "Bounder" sz ""
 
     inputlabel	1	"Sub-Network Input #1"
     inputlabel	2	"Sub-Network Input #2"
@@ -20,6 +23,27 @@
         type    intlog
         default { "1" }
         range   { 1 1000 }
+    }
+    parm {
+        name    "BoxSizeX"
+        label   "BoxSizeX"
+        type    float
+        default { "0" }
+        range   { 0 10 }
+    }
+    parm {
+        name    "BoxSizeY"
+        label   "BoxSizeY"
+        type    float
+        default { "0" }
+        range   { 0 10 }
+    }
+    parm {
+        name    "BoxSizeZ"
+        label   "BoxSizeZ"
+        type    float
+        default { "0" }
+        range   { 0 10 }
     }
     multiparm {
         name    "folder0"

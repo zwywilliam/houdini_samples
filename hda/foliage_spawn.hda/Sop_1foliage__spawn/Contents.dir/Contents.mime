@@ -34,7 +34,7 @@ sopflags sopflags =
 comment ""
 position -0.102479 -3.6516
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 }
@@ -51,7 +51,7 @@ inputs
 stat
 {
   create 1535425708
-  modify 1537085212
+  modify 1538200862
   author Win10base@wenyong-pc
   access 0777
 }
@@ -76,7 +76,7 @@ Content-Disposition: attachment; filename="hdaroot.inp"
 Content-Type: text/plain
 
 2
-0 0 6 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+0 -0.019445727132296149 9.5196766109456021 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
 1 3 6.5 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -429,16 +429,16 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	null1 1 1 "input1"
+0 	heightfield_tilesplice1 1 1 "input1"
 }
 inputs
 {
-0 	null1 0 1
+0 	heightfield_tilesplice1 0 1
 }
 stat
 {
   create 1535425807
-  modify 1535721485
+  modify 1538200862
   author Win10base@wenyong-pc
   access 0777
 }
@@ -771,7 +771,7 @@ inputs
 stat
 {
   create 1536585549
-  modify 1536586671
+  modify 1537606376
   author Win10base@wenyong-pc
   access 0777
 }
@@ -910,7 +910,7 @@ sopflags sopflags =
 comment ""
 position -2.02459 -9.65026
 connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 2 "output1"
@@ -928,7 +928,7 @@ inputs
 stat
 {
   create 1535344789
-  modify 1536585550
+  modify 1537606375
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1301,7 +1301,7 @@ inputs
 stat
 {
   create 1535423084
-  modify 1535685718
+  modify 1537606372
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1528,7 +1528,7 @@ inputs
 stat
 {
   create 1535425821
-  modify 1535721494
+  modify 1537606357
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1569,7 +1569,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 0.379979 4.8307
+position 0.360533 8.35038
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -1587,7 +1587,7 @@ inputs
 stat
 {
   create 1535721475
-  modify 1535721478
+  modify 1538200857
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1811,34 +1811,37 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python1.init"
+Content-Disposition: attachment; filename="hdaroot/heightfield_tilesplice1.init"
 Content-Type: text/plain
 
-type = python
+type = volumesplice
 matchesdef = 0
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python1.def"
+Content-Disposition: attachment; filename="hdaroot/heightfield_tilesplice1.def"
 Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 1.74088 10.9845
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+position 0.360533 6.97123
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
+1 "output1"
 }
 inputsNamed3
 {
+0 	null1 1 1 "input1"
 }
 inputs
 {
+0 	null1 0 1
 }
 stat
 {
-  create 1536843304
-  modify 1537018307
+  create 1538200862
+  modify 1538200867
   author Win10base@wenyong-pc
   access 0777
 }
@@ -1848,123 +1851,17 @@ exprlanguage hscript
 end
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python1.parm"
+Content-Disposition: attachment; filename="hdaroot/heightfield_tilesplice1.parm"
 Content-Type: text/plain
 
 {
 version 0.8
-python	[ 0	locks=0 ]	(	"import sys
-sys.path.append(\"$HIP/python\")
-
-import testpy
-
-node = hou.pwd() 
-geo = node.geometry() 
-
-import json 
-
-testjson = '{\"a\":1,\"b\":2}'
-
-items = json.loads(testjson)
-
-# Add code to modify contents of geo.
-# Use drop down menu to select examples.
-
-hou.node(\"../\").parm(\"IntegerMul01_1\").set(items[\"b\"])
-lin = hou.rampBasis.Linear
-hou.Ramp([lin, lin], (0, 1), (2.5, 4.5))
-
-f = open(\"$HIP/tmp/json.txt\")
-fstr = f.read()
-items2 = json.loads(fstr)
-f.close()
-
-for (k,v) in items.items(): 
-    geo.addAttrib(hou.attribType.Global, k, v)
-    
-for (k,v) in items2.items(): 
-    geo.addAttrib(hou.attribType.Global, k, v)
-    
-geo.addAttrib(hou.attribType.Global, testpy.get_python_str(), 123)
-
-"	)
+group	[ 0	locks=0 ]	(	""	)
+deleteorig	[ 0	locks=0 ]	(	"on"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python1.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"16.5.571"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python2.init"
-Content-Type: text/plain
-
-type = python
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python2.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position 3.91338 11.7292
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create 1537068795
-  modify 1537068847
-  author zwybo@wenyong-tpx1c
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python2.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-python	[ 0	locks=0 ]	(	"node = hou.pwd()
-geo = node.geometry()
-
-# Add code to modify contents of geo.
-# Use drop down menu to select examples.
-import sys
-sys.path.append(\"$HIP/python\")
-
-import hda.FoliageSpawnInit
-reload(hda.FoliageSpawnInit)
-from hda.FoliageSpawnInit import FoliageSpawnInit as FSI
-
-
-fsi = FSI()
-fsi.run() 
-
-"	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/python2.userdata"
+Content-Disposition: attachment; filename="hdaroot/heightfield_tilesplice1.userdata"
 Content-Type: text/plain
 
 {
@@ -1978,7 +1875,7 @@ Content-Type: text/plain
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-23
+22
 heightfield_noise1
 heightfield_maskbyfeature1
 convertheightfield1
@@ -2000,8 +1897,7 @@ switch2
 null2
 output1
 attribwrangle1
-python1
-python2
+heightfield_tilesplice1
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.net"
